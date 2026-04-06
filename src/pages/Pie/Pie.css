@@ -1,0 +1,405 @@
+.Pie{
+    width: 60%;
+    background-color: var(--lightDark);
+    height: 100%;
+}
+.pie__container{
+    max-width: 60%;
+}
+.pie__header{
+    padding: 30px 30px;
+    p{
+        color: var(--textColor);
+    }
+}
+.bottom__lin{
+    width: 746px;
+    height: 2px;
+    background-color: #0000001a;
+    margin-top: 25px;
+}
+.total__list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    .total__item{
+        width: 199px;
+        height: 143px;
+        border-radius: 8px;
+        background-color: var(--mainDark);
+        padding: 15px 20px;
+        h4{
+            color: white;
+        }
+        p{
+            color: var(--textColor);
+        }
+    }
+}
+.total__div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 130px;
+}
+.total__wrapper:first-child{
+    width: 38px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #252836;
+    i{
+        color: #9288E0;
+    }
+}
+.total__wrapper2{
+    width: 38px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #252836;
+    i{
+        color: #FFB572;
+    }
+}
+.total__span{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.total__percent1{
+    color: #50D1AA;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90px;
+}
+.total__percent2{
+    color: #FF7CA3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90px;
+}
+.total__icon{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: var(--lightDark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.total__icon2{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #f7a0a7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.picon__ppl{
+    color: #65B0F6;
+}
+
+.customers{
+    width: 746px;
+    height: 506px;
+    border-radius: 8px;
+    background-color: var(--mainDark);
+    margin-top: 20px;
+    margin: 30px;
+}
+.order__report{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 30px 20px;
+}
+.filter__order{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 128px;
+    height: 45px;
+    border: 1px solid var(--lightDark);
+    border-radius: 8px;
+    padding: 10px;
+    p{
+        padding-top: 12px;
+    }
+}
+.order__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 696px;
+    color: white;
+    padding: 0px 25px;
+}
+.border__bottom{
+    width: 746px;
+    height: 1px;
+    background-color: var(--lightDark);
+}
+.customer__info{
+    display: flex;
+    justify-content: space-between;
+    width: 696px;
+    height: 66px;
+    color: var(--textColor);
+    padding-top: 30px;
+    padding-left: 15px;
+}
+.customer__name{
+    display: flex;
+    justify-content: space-between;
+    width: 154px;
+    padding: 0px 10px;
+    div{
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: #FFB572;
+    }
+}
+.customer__food{
+    width: 137px;
+    height: 40px;
+    transform: translateX(-25px);
+}
+.customer__price{
+    transform: translateX(-65px);
+}
+.customer__status{
+    padding: 5px 18px;
+    border-radius: 30px;
+    background-color: #50D1AA;
+    color: white;
+    transform: translateX(30px);
+}
+.status{
+    transform: translateX(-20px);
+}
+.customer__name1{
+    display: flex;
+    justify-content: space-between;
+    width: 154px;
+    padding: 0px 10px;
+    p{
+        transform: translateX(20px);
+    }
+    div{
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: #65B0F6;
+    }
+}
+.customer__status1{
+    padding: 5px 24px;
+    border-radius: 30px;
+    background-color: #9290FE;
+    color: white;
+    transform: translateX(30px);
+}
+.customer__name2{
+    display: flex;
+    justify-content: space-between;
+    width: 154px;
+    padding: 0px 10px;
+    p{
+        transform: translateX(20px);
+    }
+    div{
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: rgb(255, 150, 167);
+    }
+}
+.customer__status2{
+    padding: 5px 28px;
+    border-radius: 30px;
+    background-color: #FFB572;
+    color: white;
+    transform: translateX(30px);
+}
+.customer__title{
+    transform: translateX(10px);
+}
+.customer__name3{
+    display: flex;
+    justify-content: space-between;
+    width: 154px;
+    padding: 0px 10px;
+    div{
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: aqua;
+    }
+}
+.customer__name4{
+    display: flex;
+    justify-content: space-between;
+    width: 154px;
+    padding: 0px 10px;
+    div{
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: rgb(0, 183, 255);
+    }
+}
+
+.most__ordered{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    width: 33%;
+    background-color: var(--lightDark);
+    border: 1px solid #393C49;
+    padding: 25px;
+}
+.most__header{
+    background-color: #1F1D2B;
+    width: 372px;
+    height: 429px;
+    padding: 24px;
+    border-radius: 8px;
+}
+.most__dishes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    h3{
+        font-size: 20px;
+        color: white;
+    }
+    select{
+        width: 105px;
+        height: 35px;
+        border: 1px solid #393C49;
+        background-color: #1F1D2B;
+        color: white;
+        padding: 0px 5px;
+        border-radius: 8px;
+        outline: none;
+    }
+}
+.bottom__line3{
+    margin-top: 30px;
+    width: 322px;
+    height: 1px;
+    background-color: #393C49;
+}
+.ordered__list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 210px;
+    margin-top: 20px;
+    transform: translateX(-30px);
+}
+.ordered__item{
+    display: flex;
+    justify-content: space-between;
+    width: 291px;
+}
+.ordered__text{
+    .dish__count{
+        margin-top: -15px;
+    }
+}
+.ordered__btn{
+    width: 324px;
+    height: 48px;
+    border-radius: 8px;
+    border: 1px solid var(--lightOrange);
+    background-color: var(--mainDark);
+    color: var(--lightOrange);
+}
+
+.order__type{
+    margin-top: 92px;
+    background-color: #1F1D2B;
+    width: 372px;
+    height: 333px;
+    padding: 24px;
+    border-radius: 8px;
+}
+.bottom__line4{
+    background-color: #393C49;
+    width: 372px;
+    height: 1px;
+    margin-left: -25px;
+    margin-top: 15px;
+}
+.radial__chart{
+    width: 176px;
+    height: 176px;
+}
+
+.customer__chart{
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+    padding: 30px 0px;
+}
+.customer__list{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+    .customer__item{
+        display: flex;
+        justify-content: space-between;
+        width: 180px;
+        p{
+            font-size: 14px;
+        }
+        .cutomer__span{
+            font-size: 12px;
+            transform: translateY(-10px);
+            color: var(--textColor);
+        }
+    }
+    .customer__span{
+        font-size: 15px;
+    }
+}
+.cutomer__number{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 150px;
+}
+.customer__color{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #FF7CA3;
+}
+.customer__color2{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #FFB572;
+}
+.customer__color3{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #65B0F6;
+}

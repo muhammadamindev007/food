@@ -1,0 +1,33 @@
+.Login{
+    background-color: var(--mainDark);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 100px;
+}
+.form__login{
+    background-color: var(--lightDark);
+    border: 1px solid var(--textColor);
+    input:focus{
+        box-shadow: none;
+        background-color: var(--lightDark);
+        border: 1px solid white;
+    }
+    input::placeholder{
+        color: rgba(255, 255, 255, 0.795);
+    }
+    input{
+        background-color: var(--lightDark);
+        color: white;
+    }
+    .already{
+        width: 270px;
+        display: flex;
+        justify-content: space-between;
+        button{
+            margin-top: -20px;
+        }
+    }
+}

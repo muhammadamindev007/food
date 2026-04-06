@@ -1,0 +1,103 @@
+.Home{
+    width: 60%;
+    background-color: var(--lightDark);
+}
+.home__info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    h2{
+        color: white;
+    }
+    p{
+        color: white;
+    }
+    .home__search{
+        padding: 14px;
+        background-color: #2D303E;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 240px;
+        button{
+            border: none;
+            background-color: #2D303E
+        }
+        input{
+            background-color: #2D303E;
+            border: none;
+            outline: none;
+            overflow: hidden;
+            color: #ABBBC2;
+        }
+        input:placeholder{
+            color: #ABBBC2;
+            background-color: #2D303E;
+        }
+    }
+}
+
+.catgory__list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: -30px;
+    margin-top: 50px;
+    .category__btn{
+        color: white;
+        border: none;
+        background-color: var(--lightDark);
+        height: 40px;
+        padding-bottom: 12px;
+        transition: all ease 0s;
+    }
+    .category__btn:hover{
+        color: var(--lightOrange);
+        border-bottom: 2px solid var(--lightOrange);
+        padding-bottom: 10px;
+    }
+    .active{
+        color: var(--lightOrange);
+        border-bottom: 2px solid var(--lightOrange);
+        padding-bottom: 10px;
+    }
+}
+
+.food__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.food__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    height: 260px;
+    background-color: var(--mainDark);
+    padding: 10px 32px;
+    border-radius: 16px;
+    margin-top: 40px;
+    button{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    div{
+        transform: translateY(-50px);
+    }
+    img{
+        width: 132px;
+        height: 132px;
+    }
+    p{
+        color: white;
+        width: 144px;
+    }
+    span{
+        color: var(--textColor);
+    }
+}

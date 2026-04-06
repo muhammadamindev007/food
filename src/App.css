@@ -1,0 +1,26 @@
+:root{
+  --mainDark:#1F1D2B;
+  --lightDark:#393C49;
+  --lightOrange:#EA7C69;
+  --textColor:#ABBBC2;
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ul,ol{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+}
+.App{
+  display: flex;
+  min-height:100vh;
+  background-color: var(--lightDark);
+  margin-bottom: -25px;
+}
+.container{
+  width: 733px;
+}
