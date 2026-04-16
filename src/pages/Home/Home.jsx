@@ -50,7 +50,6 @@ function Home(){
     localStorage.setItem('foodlist',JSON.stringify(arr))
     window.dispatchEvent(new Event('foodUpdated'))
   }
-
   return (
     <div className='Home'>
       <div className="container">
@@ -62,7 +61,7 @@ function Home(){
           <div>
             <form onSubmit={() => fnSearch(event)} className="home__search" action="#">
               <button><i className="bi bi-search text-light"></i></button>
-              <input name='name' type="text" placeholder='Search for food, coffe, etc...' />
+              <input autoComplete='off' name='name' type="text" placeholder='Search for food, coffe, etc...' />
             </form>
           </div>
         </div>

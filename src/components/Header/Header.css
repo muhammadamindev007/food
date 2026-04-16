@@ -1,21 +1,28 @@
-.Header{
+.Header {
     background-color: var(--mainDark);
-  width:110px;
-  min-height:100vh;
+    max-width: 96px;
+    min-height: 100vh;
 }
-.nav__list{
+@media (max-width:700px) {
+    .Header{
+        display: none;
+    }
+}
+
+.nav__list {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
     min-height: 100vh;
     padding-top: 20px;
-    a{
+
+    a {
         width: 92px;
         height: 52px;
     }
-    
-    .nav__item{
+
+    .nav__item {
         margin-left: 5.5px;
         width: 92px;
         height: 92px;
@@ -26,13 +33,34 @@
         border-radius: 8px;
         color: var(--lightOrange);
         font-size: 20px;
-        
     }
-    .header__link{
+
+    @media (max-width:1440px) {
+        .nav__item {
+            width: 70px;
+            height: 70px;
+            margin-left: 10px;
+
+            a {
+                width: 70px;
+                height: 70px;
+            }
+        }
+
+        .nav__list {
+            width: 70px;
+        }
+
+        .Header {
+            width: 70px;
+        }
+    }
+
+    .header__link {
         color: var(--lightOrange);
     }
-    
-    .nav__item .header__link{
+
+    .nav__item .header__link {
         width: 56px;
         height: 56px;
         display: flex;
@@ -43,31 +71,32 @@
         font-size: 20px;
         transition: 0.3s;
     }
-    
-    .nav__item:hover{
+
+    .nav__item:hover {
         background-color: var(--lightDark);
     }
-    
-    .nav__item:hover .header__link{
+
+    .nav__item:hover .header__link {
         background-color: var(--lightOrange);
         color: white;
         background-color: var(--lightOrange);
         color: white;
     }
-    
-    .active{
+
+    .active {
         background-color: var(--lightDark);
     }
-    
-    .active .header__link{
+
+    .active .header__link {
         background-color: var(--lightOrange);
         color: white;
     }
 }
 
-.display__block{
+.display__block {
     display: block;
 }
-.display__none{
+
+.display__none {
     display: none;
 }
