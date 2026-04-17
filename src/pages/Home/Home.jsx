@@ -2,52 +2,52 @@ import React, { useEffect, useState } from 'react'
 import './Home.css'
 import Order from '../Order/Order';
 
-function Home(){
+function Home() {
   const [active, setActive] = useState('hot')
   const [search, setSearch] = useState("")
-  const [foodlist,setFoodlist] = useState(JSON.parse(localStorage.getItem('foodlist') || '[]'))
-  const [food,setFood] = useState([])
-  
+  const [foodlist, setFoodlist] = useState(JSON.parse(localStorage.getItem('foodlist') || '[]'))
+  const [food, setFood] = useState([])
 
-  function fnVal(e){
+
+  function fnVal(e) {
     setActive(e.target.value);
   }
 
-  function fnSearch(e){
+  function fnSearch(e) {
     e.preventDefault()
     setSearch(e.target.name.value)
   }
 
-  useEffect(()=>{
+  useEffect(() => {
     const updateData = () => {
       const data = JSON.parse(localStorage.getItem('foodlist')) || []
       setFoodlist(data)
     }
-    window.addEventListener('foodUpdated',updateData)
-    return ()=>  window.removeEventListener('foodUpdated',updateData)
-  },[])
-  
+    window.addEventListener('foodUpdated', updateData)
+    return () => window.removeEventListener('foodUpdated', updateData)
+  }, [])
 
-  useEffect(()=>{
+
+  useEffect(() => {
     fetch('https://69cfdd00a4647a9fc67614e2.mockapi.io/foodlist')
-    .then((res)=>res.json())
-    .then((data)=>setFood(data))
-  },[])
+      .then((res) => res.json())
+      .then((data) => setFood(data))
+  }, [])
 
-  function fnSet(id){
+  function fnSet(id) {
     let arr = [...foodlist]
-    let found = arr.find((item)=>item.id == id)
-    if(found){
+    let found = arr.find((item) => item.id == id)
+    if (found) {
       found.count = found.count + 1
-    }else{
-      const foodItem = food.find((item)=> item.id == id)
+    } else {
+      const foodItem = food.find((item) => item.id == id)
 
-      if(foodItem){
-        arr.push({...foodItem, count:1})
+      if (foodItem) {
+        arr.push({ ...foodItem, count: 1 })
       }
     }
     setFoodlist(arr)
-    localStorage.setItem('foodlist',JSON.stringify(arr))
+    localStorage.setItem('foodlist', JSON.stringify(arr))
     window.dispatchEvent(new Event('foodUpdated'))
   }
   return (
@@ -88,15 +88,31 @@ function Home(){
             <button className={active == 'drinks' ? 'category__btn active' : 'category__btn'} value={'drinks'} onClick={fnVal}>Drinks</button>
           </li>
         </ul>
+        <select
+          className="category__select"
+          value={active}
+          onChange={(e) => setActive(e.target.value)}
+        >
+          <option hidden value="hot">Hot Dishes</option>
+          <option value="cold">Cold Dishes</option>
+          <option value="soup">Soup</option>
+          <option value="grill">Grill</option>
+          <option value="appetizer">Appetizer</option>
+          <option value="dessert">Dessert</option>
+          <option value="drinks">Drinks</option>
+        </select>
 
-        <h4 className='text-light pt-3'>Choose {active == 'drinks' ? 'drinks' : 'dishes' && active == 'dessert'?'desserts':'dishes' && active == 'appetizer'?'appetizers':'dishes' && active == 'grill'?'grill':'dishes' && active == 'soup'?'soup':'dishes'}</h4>
+        <div className='choose__div'>
+          <h4 className='text-light pt-3'>Choose {active == 'drinks' ? 'drinks' : 'dishes' && active == 'dessert' ? 'desserts' : 'dishes' && active == 'appetizer' ? 'appetizers' : 'dishes' && active == 'grill' ? 'grill' : 'dishes' && active == 'soup' ? 'soup' : 'dishes'}</h4>
+          <i class="bi bi-cart3 text-light fs-4 food__cart"></i> <div className="overall"><p>0</p></div>
+        </div>
         <ul className="food__list pt-5">
           {
             food.filter((item) => search ? item.title.toLowerCase().includes(search.toLowerCase()) : item.category == active).map((i, index) => (
               <li key={index} className="food__item">
                 <div>
-                  <button onClick={()=>fnSet(i.id)}><img src={i.img} alt="" /></button>
-                  <p className='pt-2'>{i.title.slice(0,20)}</p>
+                  <button onClick={() => fnSet(i.id)}><img src={i.img} alt="" /></button>
+                  <p className='pt-2'>{i.title.slice(0, 20)}</p>
                   <p>{i.price}</p>
                   <span>{i.bowls} {active == 'drinks' ? 'Bottles' : 'Bowls'} available</span>
                 </div>
@@ -105,10 +121,10 @@ function Home(){
           }
         </ul>
       </div>
-      
+
     </div>
   )
 
 }
-<Order/>
+<Order />
 export default Home

@@ -7,8 +7,14 @@
     .Order{
         width: 350px;
     }
+    .order__comment{
+        width: 320px;
+        input{
+            width: 320px;
+        }
+    }
 }
-.order__right {
+.order__right{
     transform: translateX(-458px);
 }
 .order__left{
@@ -56,7 +62,7 @@
     gap: 10px;
 }
 
-.order__btn {
+.order__btn{
     border-radius: 8px;
     padding: 7px 12px;
     border: 1px solid var(--lightOrange);
@@ -158,10 +164,10 @@
     justify-content: space-between;
     align-items: center;
     padding-top: 30px;
-    max-width: 390px;
+    width: 390px;
 
     input {
-        max-width: 320px;
+        width: 320px;
         height: 48px;
         background-color: #2D303E;
         border: none;
@@ -248,7 +254,8 @@
 .payment__footer {
     display: flex;
     flex-direction: column;
-    color: white;width: 450px;
+    color: white;
+    width: 450px;
     padding: 60px 35px;
     position: fixed;
     bottom: 0;
@@ -276,12 +283,6 @@
     }
 }
 @media (max-width:820px) {
-    /* .payment__methods{
-        width: 358px;
-    }
-    .order__menu{
-        width: 358px;
-    } */
     .Order{
         display: flex;
         flex-direction: column;
@@ -377,7 +378,7 @@
         display: flex;
         justify-content: space-between;
         input{
-    width: 172px;
+            width: 172px;
         }
     }
 }
@@ -387,7 +388,7 @@
     justify-content: space-between;
     align-items: center;
     .confirm__btn:first-child{
-width: 175px;
+        width: 175px;
         height: 48px;
         border-radius: 8px;
         padding: 14px;
@@ -399,7 +400,7 @@ width: 175px;
         color: var(--lightOrange);
     }
     .confirm__btn:nth-child(2){
-width: 175px;
+        width: 175px;
         height: 48px;
         border-radius: 8px;
         padding: 14px;
