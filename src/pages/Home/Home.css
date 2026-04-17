@@ -164,6 +164,6 @@
     .home__search{
         width: 100px;
         height: 30px;
-        
+        overflow: hidden;
     }
 }
