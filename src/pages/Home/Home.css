@@ -208,45 +208,4 @@
     display: none;
 }
 
-@media (max-width:680px) {
-    .Home {
-        margin: 0 auto;
-    }
-    .food__cart{
-        display: block;
-    }
-    .overall {
-        display: block;
-    }
 
-    .catgory__list {
-        display: none;
-        /* buttonlar yo‘qoladi */
-    }
-
-    .category__select {
-        display: block;
-        /* select chiqadi */
-    }
-}
-
-@media (max-width:340px) {
-    .overall{
-        top: 35%;
-    }
-}
-@media (max-width:325px) {
-    .overall{
-        top: 35%;
-    }
-}
-@media (max-width:320px) {
-    .overall{
-        top: 42%;
-    }
-}
-@media (max-width:294px) {
-    .overall{
-        top: 45%;
-    }
-}
