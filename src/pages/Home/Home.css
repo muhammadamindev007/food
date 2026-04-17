@@ -142,3 +142,28 @@
         margin: 0 auto;
     }
 }
+
+@media (max-width:360px) {
+    .food__item{
+        width: 150px;
+        height: 190px;
+        img{
+            width: 90px;
+            height: 90px;
+        }
+        p{
+            font-size: 13px;
+            width: 80px;
+            transform: translateX(3px);
+        }
+        span{
+            font-size: 10px;
+            width: 40px;
+        }
+    }
+    .home__search{
+        width: 100px;
+        height: 30px;
+        
+    }
+}

@@ -96,7 +96,7 @@ function Home(){
               <li key={index} className="food__item">
                 <div>
                   <button onClick={()=>fnSet(i.id)}><img src={i.img} alt="" /></button>
-                  <p className='pt-2'>{i.title.slice(0,40)}</p>
+                  <p className='pt-2'>{i.title.slice(0,20)}</p>
                   <p>{i.price}</p>
                   <span>{i.bowls} {active == 'drinks' ? 'Bottles' : 'Bowls'} available</span>
                 </div>
