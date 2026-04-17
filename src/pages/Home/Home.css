@@ -171,21 +171,26 @@
     align-items: center;
 }
 
-.overall{
-    width: 20px;
-    height: 20px;
+.cart__wrapper {
+    position: relative;
+}
+
+.overall {
+    position: absolute;
+    top: -6px;     /* tepaga chiqadi */
+    right: -8px;   /* o‘ngga chiqadi */
+
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
     background-color: var(--lightOrange);
-    display: none;
-    position: absolute;
-    top: 36%;
-    left: 76%;
     color: white;
-    p {
+
+    p{
         display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 12px;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
     }
 }
 
@@ -205,7 +210,7 @@
 }
 
 .food__cart {
-    display: none;
+    position: relative;
 }
 
 
@@ -230,24 +235,6 @@
         /* select chiqadi */
     }
 }
-
-@media (max-width:340px) {
-    .overall{
-        top: 35%;
-    }
+@media (max-width:680px) {
+    
 }
-@media (max-width:325px) {
-    .overall{
-        top: 35%;
-    }
-}
-@media (max-width:320px) {
-    .overall{
-        top: 42%;
-    }
-}
-@media (max-width:294px) {
-    .overall{
-        top: 45%;
-    }
-} 

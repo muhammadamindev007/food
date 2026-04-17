@@ -102,9 +102,16 @@ function Home() {
           <option value="drinks">Drinks</option>
         </select>
 
+
         <div className='choose__div'>
-          <h4 className='text-light pt-3'>Choose {active == 'drinks' ? 'drinks' : 'dishes' && active == 'dessert' ? 'desserts' : 'dishes' && active == 'appetizer' ? 'appetizers' : 'dishes' && active == 'grill' ? 'grill' : 'dishes' && active == 'soup' ? 'soup' : 'dishes'}</h4>
-          <i class="bi bi-cart3 text-light fs-4 food__cart"></i> <div className="overall"><p>0</p></div>
+          <h4 className='text-light pt-3'>
+            Choose {active == 'drinks' ? 'drinks' : active == 'dessert' ? 'desserts' : active == 'appetizer' ? 'appetizers' : active == 'grill' ? 'grill' : active == 'soup' ? 'soup' : 'dishes'}
+          </h4>
+
+          <div className="cart__wrapper">
+            <i className="bi bi-cart3 text-light fs-4"></i>
+            <div className="overall"><p>0</p></div>
+          </div>
         </div>
         <ul className="food__list pt-5">
           {
