@@ -237,7 +237,9 @@
         /* select chiqadi */
     }
 }
-
+.modal .btn-close{
+    filter: invert(1);
+}
 .modal .Order {
     display: block !important;
 }
