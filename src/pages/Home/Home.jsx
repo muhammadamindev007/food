@@ -50,6 +50,8 @@ function Home() {
     localStorage.setItem('foodlist', JSON.stringify(arr))
     window.dispatchEvent(new Event('foodUpdated'))
   }
+
+  const totalCount = foodlist.reduce((sum, item) => sum + item.count, 0)
   return (
     <div className='Home'>
       <div className="container">
@@ -110,7 +112,7 @@ function Home() {
 
           <div className="cart__wrapper">
             <i className="bi bi-cart3 text-light fs-4"></i>
-            <div className="overall"><p>0</p></div>
+            <div className="overall"><p>{totalCount}</p></div>
           </div>
         </div>
         <ul className="food__list pt-5">
