@@ -111,12 +111,12 @@ function Home() {
             Choose {active == 'drinks' ? 'drinks' : active == 'dessert' ? 'desserts' : active == 'appetizer' ? 'appetizers' : active == 'grill' ? 'grill' : active == 'soup' ? 'soup' : 'dishes'}
           </h4>
 
-         <Link to={'/order'}>
-         <div className="cart__wrapper">
+          <Link to={'/order'}> 
+          <div className="cart__wrapper">
             <i className="bi bi-cart3 text-light fs-4"></i>
             <div className="overall"><p>{totalCount}</p></div>
           </div>
-         </Link>
+          </Link>
         </div>
         <ul className="food__list pt-5">
           {
@@ -136,7 +136,6 @@ function Home() {
 
     </div>
   )
-
 }
-<Order />
+<Order/>
 export default Home

@@ -19,8 +19,8 @@ function Pie() {
                 <li className="total__item">
                     <div className="total__div">
                         <span className='total__span'>
-                            <div className='total__wrapper'><i class="bi bi-currency-dollar"></i></div>
-                            <div className='total__percent1'>+32.40% <div className='total__icon'><i class="bi bi-arrow-up-short"></i></div></div>
+                            <div className='total__wrapper'><i className="bi bi-currency-dollar"></i></div>
+                            <div className='total__percent1'>+32.40% <div className='total__icon'><i className="bi bi-arrow-up-short"></i></div></div>
                         </span>
                         <h4>$10,243.00</h4>
                         <p>Total Revenue</p>
@@ -29,8 +29,8 @@ function Pie() {
                 <li className="total__item">
                     <div className="total__div">
                         <span className='total__span'>
-                            <div className='total__wrapper2'><i class="bi bi-bookmark"></i></div>
-                            <div className='total__percent2'>-12.40% <div className='total__icon2'><i class="bi bi-arrow-down"></i></div></div>
+                            <div className='total__wrapper2'><i className="bi bi-bookmark"></i></div>
+                            <div className='total__percent2'>-12.40% <div className='total__icon2'><i className="bi bi-arrow-down"></i></div></div>
                         </span>
                         <h4>23,456</h4>
                         <p>Total Dishes</p>
@@ -39,8 +39,8 @@ function Pie() {
                 <li className="total__item">
                     <div className="total__div">
                         <span className='total__span'>
-                            <div className='total__wrapper'><i class="icon__ppl bi bi-people-fill"></i></div>
-                            <div className='total__percent1'>+2.40% <div className='total__icon'><i class="bi bi-arrow-up-short"></i></div></div>
+                            <div className='total__wrapper'><i className="icon__ppl bi bi-people-fill"></i></div>
+                            <div className='total__percent1'>+2.40% <div className='total__icon'><i className="bi bi-arrow-up-short"></i></div></div>
                         </span>
                         <h4>1234</h4>
                         <p>Total Customers</p>
@@ -51,7 +51,7 @@ function Pie() {
                 <div className="order__report">
                     <h4>Order Report</h4>
                     <div className="filter__order">
-                        <i class="bi bi-filter"></i>
+                        <i className="bi bi-filter"></i>
                         <p>Filter Order</p>
                     </div>
                 </div>
