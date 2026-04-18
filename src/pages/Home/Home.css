@@ -249,12 +249,14 @@
 .modal-header{
     background-color: var(--mainDark);
     color: white;
+    border-bottom: 1px solid var(--lightDark);
     button{
         color: white;
     }
 }
 .modal-footer{
     background-color: var(--mainDark);
+    border-top: 1px solid var(--lightDark);
 }
 .btn-close{
     color: white;

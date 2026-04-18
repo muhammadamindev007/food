@@ -488,3 +488,53 @@
         display: none;
     }
 }
+@media (max-width:530px) {
+    .payment__methods{
+        width: 430px;
+        transform: translateX(-20px);
+    }
+}
+@media (max-width:500px) {
+    .payment__methods{
+        transform: translateX(-30px);
+    }
+}
+@media (max-width:480px) {
+    .payment__methods{
+        transform: translateX(-40px);
+    }
+}
+@media (max-width:460px) {
+    .payment__methods{
+        width: 400px;
+        transform: translateX(-75px);
+    }
+    .bottom__line2 {
+        width: 390px;
+    }
+}
+@media (max-width:430px) {
+    .payment__methods{
+        width: 380px;
+        transform: translateX(-90px);
+    }
+    .bottom__line2 {
+        width: 370px;
+    }
+}
+
+@media (max-width:420px) {
+    .payment__methods{
+        width: 360px;
+        transform: translateX(-110px);
+    }
+    .bottom__line2 {
+        width: 350px;
+    }
+    .payment__inputs{
+        transform: translateX(-23px);
+    }
+    .confirm__control{
+        transform: translateX(10px);
+    }
+}
