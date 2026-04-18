@@ -6,6 +6,7 @@ function Order() {
     const [foodlist, setFoodlist] = useState([])
     const [left, setLeft] = useState(false)
     const [payment,setPayment] = useState('')
+    const [open,setOpen] = useState(false)
 
     useEffect(() => {
         const loadData = () => {

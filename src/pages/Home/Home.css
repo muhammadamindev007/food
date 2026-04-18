@@ -238,5 +238,22 @@
     }
 }
 
-
-
+.modal .Order {
+    display: block !important;
+}
+.modal-body{
+    background-color: var(--mainDark);
+}
+.modal-header{
+    background-color: var(--mainDark);
+    color: white;
+    button{
+        color: white;
+    }
+}
+.modal-footer{
+    background-color: var(--mainDark);
+}
+.btn-close{
+    color: white;
+}
