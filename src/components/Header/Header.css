@@ -3,11 +3,7 @@
     max-width: 96px;
     min-height: 100vh;
 }
-@media (max-width:700px) {
-    .Header{
-        display: none;
-    }
-}
+
 
 .nav__list {
     display: flex;
@@ -56,6 +52,13 @@
         }
     }
 
+    @media (max-width:420px) {
+        .Header{
+            width: 70px;
+        }
+       
+    }
+
     .header__link {
         color: var(--lightOrange);
     }
@@ -100,3 +103,5 @@
 .display__none {
     display: none;
 }
+
+

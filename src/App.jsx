@@ -16,6 +16,7 @@ function App() {
         <Route path='/pie' element={<Pie/>}/>
         <Route path='/settings' element={<Settings/>}/>
         <Route path='/' element={<Login/>}/>
+        <Route path='/order' element={<Order/>}/>
       </Routes>
     </div>
   )

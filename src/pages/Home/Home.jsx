@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Home.css'
 import Order from '../Order/Order';
+import { Link } from 'react-router-dom';
 
 function Home() {
   const [active, setActive] = useState('hot')
@@ -110,10 +111,12 @@ function Home() {
             Choose {active == 'drinks' ? 'drinks' : active == 'dessert' ? 'desserts' : active == 'appetizer' ? 'appetizers' : active == 'grill' ? 'grill' : active == 'soup' ? 'soup' : 'dishes'}
           </h4>
 
-          <div className="cart__wrapper">
+         <Link to={'/order'}>
+         <div className="cart__wrapper">
             <i className="bi bi-cart3 text-light fs-4"></i>
             <div className="overall"><p>{totalCount}</p></div>
           </div>
+         </Link>
         </div>
         <ul className="food__list pt-5">
           {
