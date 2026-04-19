@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import './Home.css'
 import Order from '../Order/Order';
-import { Link } from 'react-router-dom';
+import { FaGlobe } from "react-icons/fa";
 
 function Home() {
   const [active, setActive] = useState('hot')
   const [search, setSearch] = useState("")
   const [foodlist, setFoodlist] = useState(JSON.parse(localStorage.getItem('foodlist') || '[]'))
   const [food, setFood] = useState([])
+
+  const [open, setOpen] = useState(false);
+  const [lang, setLang] = useState("UZ");
 
 
   function fnVal(e) {
@@ -61,6 +64,18 @@ function Home() {
             <h2>Wendy's Resto</h2>
             <p>Tuesday, 2 Feb 2021</p>
           </div>
+
+          <div className="lang">
+             <FaGlobe onClick={() => setOpen(!open)} className="lang__icon" />
+       
+             {open && (
+               <div className="lang__dropdown">
+                 <p onClick={() => {setLang("UZ"); setOpen(false)}}>UZ</p>
+                 <p onClick={() => {setLang("RU"); setOpen(false)}}>RU</p>
+               </div>
+             )}
+          </div>
+
           <div>
             <form onSubmit={() => fnSearch(event)} className="home__search" action="#">
               <button><i className="bi bi-search text-light"></i></button>
