@@ -62,12 +62,11 @@ function Home() {
         <div className="home__info">
           <div className="home__title">
             <h2>Wendy's Resto</h2>
-            <p>Tuesday, 2 Feb 2021</p>
+            <p>{lang == 'RU'? 'Вторник, 2 февраля 2021 г.':'Seshanba, 2-fevral, 2021-yil'}</p>
           </div>
 
           <div className="lang">
-             <FaGlobe onClick={() => setOpen(!open)} className="lang__icon" />
-       
+             <FaGlobe onClick={() => setOpen(!open)} className="lang__icon"/>
              {open && (
                <div className="lang__dropdown">
                  <p onClick={() => {setLang("UZ"); setOpen(false)}}>UZ</p>
@@ -79,7 +78,7 @@ function Home() {
           <div>
             <form onSubmit={() => fnSearch(event)} className="home__search" action="#">
               <button><i className="bi bi-search text-light"></i></button>
-              <input autoComplete='off' name='name' type="text" placeholder='Search for food, coffe, etc...' />
+              <input autoComplete='off' name='name' type="text" placeholder={lang == 'RU'?'Поиск продуктов питания, кофе и т.д.':'Oziq-ovqat, qahva va hokazolarni qidiring.'} />
             </form>
           </div>
         </div>

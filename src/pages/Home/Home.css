@@ -53,7 +53,9 @@
             background-color: #2D303E;
             border: none;
             outline: none;
+            white-space: nowrap;
             overflow: hidden;
+            text-overflow: ellipsis;
             color: #ABBBC2;
         }
 
