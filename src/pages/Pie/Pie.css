@@ -302,10 +302,8 @@
     }
 }
 
-.most__ordered {
-
-    z-index: 3;
-    max-width: 34%;
+.most__ordered{
+    max-width: 372px;
     background-color: var(--lightDark);
     border: 1px solid #393C49;
     padding: 25px;
@@ -313,7 +311,7 @@
 
 @media (max-width:1200px) {
     .most__ordered {
-        width: 33%;
+        width: 362px;
         background-color: var(--lightDark);
         border: 1px solid #393C49;
         padding: 25px;
@@ -488,59 +486,6 @@
     }
 }
 
-@media (max-width:525px) {
-    .bottom__lin {
-        width: 350px;
-    }
-
-    .customers {
-        width: 350px;
-    }
-
-    .order__report {
-        width: 350px;
-    }
-
-    .order__top {
-        width: 380px;
-        p{
-            font-size: 14px;
-        }
-    }
-
-    .customer__info{
-        width: 350px;
-    }
-
-    .customer__name,
-    .customer__name1,
-    .customer__name2,
-    .customer__name3,
-    .customer__name4 {
-        p {
-            width: 70px;
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            padding-bottom: 3px;
-            font-size: 11px;
-        }
-    }
-    .customer__food{
-        font-size: 12px;
-    }
-    .customer__price{
-        font-size: 12px;
-        transform: translateX(-30px);
-    }
-    .customer__status, .customer__status1, .customer__status2{
-        width: 60px;
-        padding: 7px;
-        p{
-            font-size: 12px;
-        }
-    }
-}
 
 .most__header {
     background-color: #1F1D2B;
@@ -693,4 +638,230 @@
     height: 18px;
     border-radius: 50%;
     background-color: #65B0F6;
+}
+
+
+@media (max-width:525px) {
+    .bottom__lin {
+        width: 350px;
+    }
+
+    .customers {
+        width: 350px;
+    }
+
+    .order__report {
+        width: 350px;
+    }
+
+    .order__top {
+        width: 380px;
+        p{
+            font-size: 14px;
+        }
+    }
+
+    .customer__info{
+        width: 350px;
+    }
+
+    .customer__name,
+    .customer__name1,
+    .customer__name2,
+    .customer__name3,
+    .customer__name4 {
+        p {
+            width: 70px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            padding-bottom: 3px;
+            font-size: 11px;
+        }
+    }
+    .customer__food{
+        font-size: 12px;
+    }
+    .customer__price{
+        font-size: 12px;
+        transform: translateX(-30px);
+    }
+    .customer__status, .customer__status1, .customer__status2{
+        width: 60px;
+        padding: 7px;
+        p{
+            font-size: 12px;
+        }
+    }
+
+    .most__header{
+        width: 350px;
+    }
+    .order__type{
+        width: 350px;
+    }
+    .ordered__btn{
+        transform: translateX(-10px);
+    }
+    .customer__chart{
+        transform: translateX(-10px);
+    }
+}
+
+@media (max-width:490px) {
+    .bottom__lin {
+        width: 300px;
+    }
+
+    .total__item{
+        width: 280px;
+    }
+
+    .customers {
+        width: 280px;
+    }
+
+    .order__report {
+        width: 280px;
+    }
+
+    .order__top {
+        width: 310px;
+        p{
+            font-size: 14px;
+        }
+    }
+
+    .customer__info{
+        width: 280px;
+    }
+
+    .customer__food{
+        font-size: 12px;
+        transform: translateX(8px);
+    }
+    .customer__price{
+        font-size: 12px;
+        transform: translateX(-20px);
+    }
+    .customer__status, .customer__status1, .customer__status2{
+        width: 50px;
+        padding: 8px;
+        p{
+            font-size: 10px;
+        }
+    }
+
+    .most__ordered{
+        transform: translateX(-8px);
+    }
+    .most__header{
+        width: 280px;
+        p{
+            overflow: hidden;
+        }
+    }
+    .order__type{
+        width: 280px;
+        height: 500px;
+    }
+    .ordered__btn{
+        width: 230px;
+        transform: translateX(3px);
+    }
+    .customer__chart{
+        transform: translateX(-10px);
+    }
+    .ordered__text{
+        p{
+            transform: translateX(-50px);
+            width: 180px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+    .customer__chart{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width:430px) {
+    .bottom__lin {
+        width: 270px;
+    }
+
+    .total__item{
+        width: 250px;
+    }
+
+    .customers {
+        width: 250px;
+    }
+
+    .order__report {
+        width: 280px;
+    }
+
+    .order__top {
+        width: 310px;
+        p{
+            font-size: 14px;
+        }
+    }
+
+    .customer__info{
+        width: 280px;
+    }
+
+    .customer__food{
+        font-size: 12px;
+        transform: translateX(8px);
+    }
+    .customer__price{
+        font-size: 12px;
+        transform: translateX(-20px);
+    }
+    .customer__status, .customer__status1, .customer__status2{
+        width: 50px;
+        padding: 8px;
+        p{
+            font-size: 10px;
+        }
+    }
+
+    .most__ordered{
+        transform: translateX(-8px);
+    }
+    .most__header{
+        width: 280px;
+        p{
+            overflow: hidden;
+        }
+    }
+    .order__type{
+        width: 280px;
+        height: 500px;
+    }
+    .ordered__btn{
+        width: 230px;
+        transform: translateX(3px);
+    }
+    .customer__chart{
+        transform: translateX(-10px);
+    }
+    .ordered__text{
+        p{
+            transform: translateX(-50px);
+            width: 180px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+    .customer__chart{
+        display: flex;
+        flex-direction: column;
+    }
 }

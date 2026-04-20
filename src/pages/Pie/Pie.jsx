@@ -62,7 +62,7 @@ function Pie() {
                 <div className='order__top'>
                     <p>Customer</p>
                     <p>Menu</p>
-                    <p>Total Payment</p>
+                    <p>Payment</p>
                     <p className='status'>Status</p>
                 </div>
                 <div className="border__bottom"></div>

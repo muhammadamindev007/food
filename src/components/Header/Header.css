@@ -1,6 +1,6 @@
 .Header {
     background-color: var(--mainDark);
-    max-width: 96px;
+    width: 96px;
     min-height: 100vh;
 }
 
@@ -103,3 +103,4 @@
 .display__none {
     display: none;
 }
+
