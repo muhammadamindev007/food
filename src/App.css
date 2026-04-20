@@ -3,11 +3,18 @@
   --lightDark:#393C49;
   --lightOrange:#EA7C69;
   --textColor:#ABBBC2;
+  min-height: 100vh;
 }
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+html,body{
+  overscroll-behavior: none;
+}
+body{
+  overflow-x: hidden;
 }
 ul,ol{
   list-style-type: none;

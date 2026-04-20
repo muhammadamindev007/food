@@ -9,12 +9,15 @@ import RadialChart from '../../components/Radialbar/Radialbar'
 
 function Pie() {
     return (
-        <div className='Pie pie__container'>
+        <div className='Pie'>
+            <div className="pie__inner">
+                
             <div className="pie__header">
                 <h2 className='text-light'>Dashboard</h2>
                 <p>Tuesday 2 Feb, 2021</p>
                 <div className="bottom__lin"></div>
             </div>
+
             <ul className="total__list">
                 <li className="total__item">
                     <div className="total__div">
@@ -47,6 +50,7 @@ function Pie() {
                     </div>
                 </li>
             </ul>
+
             <div className="customers">
                 <div className="order__report">
                     <h4>Order Report</h4>
@@ -118,12 +122,16 @@ function Pie() {
                     </div>
                 </div>
             </div>
+
+            </div>
+            
             <div className="most__ordered">
-                <div className="most__header">
+
+            <div className="most__header">
                     <div className="most__dishes">
                         <h3>Most Ordered</h3>
                         <select>
-                            <option selected='Today'>Today</option>
+                            <option>Today</option>
                             <option>Yesterday</option>
                         </select>
                     </div>
@@ -153,11 +161,12 @@ function Pie() {
                     </ul>
                     <button className='ordered__btn'>View All</button>
                 </div>
+
                 <div className='order__type'>
                     <div className="most__dishes">
                         <h3>Most Type of Ordered</h3>
                         <select>
-                            <option selected='Today'>Today</option>
+                            <option >Today</option>
                             <option>Yesterday</option>
                         </select>
                     </div>
@@ -191,7 +200,9 @@ function Pie() {
                     </ul>
                     </div>
                 </div>
+
             </div>
+
         </div>
     )
 }

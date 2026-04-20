@@ -84,25 +84,25 @@ function Home() {
         </div>
         <ul className="catgory__list">
           <li className="category__item">
-            <button className={active == 'hot' ? 'category__btn active' : 'category__btn'} value={'hot'} onClick={fnVal}>Hot Dishes</button>
+            <button className={active == 'hot' ? 'category__btn active' : 'category__btn'} value={'hot'} onClick={fnVal}>{lang == 'RU'? 'Горячие блюда':'Qaynoq taomlar'}</button>
           </li>
           <li className="category__item">
-            <button className={active == 'cold' ? 'category__btn active' : 'category__btn'} value={'cold'} onClick={fnVal}>Cold Dishes</button>
+            <button className={active == 'cold' ? 'category__btn active' : 'category__btn'} value={'cold'} onClick={fnVal}>{lang == 'RU'? 'Холодные блюда':'Sovuq taomlar'}</button>
           </li>
           <li className="category__item">
-            <button className={active == 'soup' ? 'category__btn active' : 'category__btn'} value={'soup'} onClick={fnVal}>Soup</button>
+            <button className={active == 'soup' ? 'category__btn active' : 'category__btn'} value={'soup'} onClick={fnVal}>{lang == 'RU'?'Суп':"Sho'rva"}</button>
           </li>
           <li className="category__item">
-            <button className={active == 'grill' ? 'category__btn active' : 'category__btn'} value={'grill'} onClick={fnVal}>Grill</button>
+            <button className={active == 'grill' ? 'category__btn active' : 'category__btn'} value={'grill'} onClick={fnVal}>{lang == 'RU'?'Гриль':'Gril'}</button>
           </li>
           <li className="category__item">
-            <button className={active == 'appetizer' ? 'category__btn active' : 'category__btn'} value={'appetizer'} onClick={fnVal}>Appetizer</button>
+            <button className={active == 'appetizer' ? 'category__btn active' : 'category__btn'} value={'appetizer'} onClick={fnVal}>{lang == 'RU'?'Закуска':'Aperatif'}</button>
           </li>
           <li className="category__item">
-            <button className={active == 'dessert' ? 'category__btn active' : 'category__btn'} value={'dessert'} onClick={fnVal}>Dessert</button>
+            <button className={active == 'dessert' ? 'category__btn active' : 'category__btn'} value={'dessert'} onClick={fnVal}>{lang == 'RU'?'Десерт':'Desert'}</button>
           </li>
           <li className="category__item">
-            <button className={active == 'drinks' ? 'category__btn active' : 'category__btn'} value={'drinks'} onClick={fnVal}>Drinks</button>
+            <button className={active == 'drinks' ? 'category__btn active' : 'category__btn'} value={'drinks'} onClick={fnVal}>{lang == 'RU'?'Напитки':'Ichimliklar'}</button>
           </li>
         </ul>
         <select
@@ -110,19 +110,26 @@ function Home() {
           value={active}
           onChange={(e) => setActive(e.target.value)}
         >
-          <option hidden value="hot">Hot Dishes</option>
-          <option value="cold">Cold Dishes</option>
-          <option value="soup">Soup</option>
-          <option value="grill">Grill</option>
-          <option value="appetizer">Appetizer</option>
-          <option value="dessert">Dessert</option>
-          <option value="drinks">Drinks</option>
+          <option hidden value="hot">{lang == 'RU'? 'Горячее блюдо':'Qaynoq taom'}</option>
+          <option value="cold">{lang == 'RU'? 'Холодное блюдо':'Sovuq taom'}</option>
+          <option value="soup">{lang == 'RU'?'Суп':"Sho'rva"}</option>
+          <option value="grill">{lang == 'RU'?'Гриль':'Gril'}</option>
+          <option value="appetizer">{lang == 'RU'?'Закуска':'Aperatif'}</option>
+          <option value="dessert">{lang == 'RU'?'Десерт':'Desert'}</option>
+          <option value="drinks">{lang == 'RU'?'Напиток':'Ichimlik'}</option>
         </select>
 
 
         <div className='choose__div'>
           <h4 className='text-light pt-3'>
-            Choose {active == 'drinks' ? 'drinks' : active == 'dessert' ? 'desserts' : active == 'appetizer' ? 'appetizers' : active == 'grill' ? 'grill' : active == 'soup' ? 'soup' : 'dishes'}
+             {active == 'drinks' ?(lang == 'RU'? 'Выбрать напиток':'Ichimlik tanlang') :
+              active == 'soup'?(lang == 'RU'? 'Выбрать суп':"Sho'rva tanlang") :
+              active == 'appetizer'?(lang == 'RU'? 'Выбрать закуску':'Aperatif tanlang'):
+              active == 'dessert'?(lang == 'RU'? 'Выбрать десерт':'Desert tanlang'):
+              active == 'cold'? (lang == 'RU'?'Выбрать холодное блюдо':'Sovuq taom tanlang'):
+              active == 'grill'?(lang == 'RU'?'Выбрать гриль':'Grill tanlang'):
+              active == 'hot'? (lang == 'RU'?'Выбрать горячее блюдо':'Qaynoq taom tanlang'):''
+             }
           </h4>
 
           <div className="cart__wrapper" data-bs-toggle="modal" data-bs-target="#exampleModal">

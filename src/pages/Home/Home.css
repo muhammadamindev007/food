@@ -43,7 +43,6 @@
         justify-content: space-between;
         align-items: center;
         width: 240px;
-
         button {
             border: none;
             background-color: #2D303E
@@ -57,6 +56,7 @@
             overflow: hidden;
             text-overflow: ellipsis;
             color: #ABBBC2;
+            width: 170px;
         }
 
         input:placeholder {
@@ -222,7 +222,7 @@
 }
 
 
-@media (max-width:680px) {
+@media (max-width:820px) {
     .Home {
         margin: 0 auto;
     }
@@ -275,7 +275,7 @@
   }
   
   .lang__icon {
-    font-size: 20px;
+    font-size: 30px;
     color: var(--mainDark);
   }
   
