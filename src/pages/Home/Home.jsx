@@ -3,14 +3,14 @@ import './Home.css'
 import Order from '../Order/Order';
 import { FaGlobe } from "react-icons/fa";
 
-function Home() {
+function Home({lang,setLang}) {
   const [active, setActive] = useState('hot')
   const [search, setSearch] = useState("")
   const [foodlist, setFoodlist] = useState(JSON.parse(localStorage.getItem('foodlist') || '[]'))
   const [food, setFood] = useState([])
 
   const [open, setOpen] = useState(false);
-  const [lang, setLang] = useState("UZ");
+  
 
 
   function fnVal(e) {

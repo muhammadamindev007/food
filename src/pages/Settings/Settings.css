@@ -11,15 +11,14 @@
 }
 
 .product__management {
-    width: 843px;
+    max-width: 843px;
     background-color: var(--mainDark);
     padding: 0px 30px;
     border-radius: 8px;
     margin-top: 30px;
-    ul {
+    ul{
         margin-top: -5px;
     }
-
     h4 {
         font-size: 20px;
         color: white;
@@ -149,4 +148,14 @@
 }
 .form__input::placeholder{
     color: grey;
+}
+
+@media (max-width:400px) {
+    .product__management{
+        transform: translateX(-25px);
+    }
+    .new__dish{
+        width: 199px;
+        height: 315px;
+    }
 }

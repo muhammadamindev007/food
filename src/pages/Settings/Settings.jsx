@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
 import './Settings.css'
 
-function Settings() {
+function Settings({lang,setLang}) {
     const [active, setActive] = useState('hot')
     const [food,setFood] = useState([])
     const [update,setUpdate] = useState(null)
+
 
     function fnVal(e) {
         setActive(e.target.value);
@@ -105,6 +106,21 @@ function Settings() {
                         <button className={active == 'drinks' ? 'category__btn1 active' : 'category__btn1'} value={'drinks'} onClick={fnVal}>Drinks</button>
                     </li>
                 </ul>
+                
+                <select
+          className="category__select"
+          value={active}
+          onChange={(e) => setActive(e.target.value)}
+        >
+          <option hidden value="hot">{lang == 'RU'? 'Горячее блюдо':'Qaynoq taom'}</option>
+          <option value="cold">{lang == 'RU'? 'Холодное блюдо':'Sovuq taom'}</option>
+          <option value="soup">{lang == 'RU'?'Суп':"Sho'rva"}</option>
+          <option value="grill">{lang == 'RU'?'Гриль':'Gril'}</option>
+          <option value="appetizer">{lang == 'RU'?'Закуска':'Aperatif'}</option>
+          <option value="dessert">{lang == 'RU'?'Десерт':'Desert'}</option>
+          <option value="drinks">{lang == 'RU'?'Напиток':'Ichimlik'}</option>
+        </select>
+
                 <div className="border__bottom2"></div>
                 <ul className="setting__list">
                     <li className="add__dish" data-bs-toggle="modal" data-bs-target="#addModal">
