@@ -47,12 +47,21 @@
     }
 }
 
-.border__bottom2 {
+/* .border__bottom2 {
     width: 783px;
     height: 1px;
     background-color: #393C49;
     transform: translateY(-18px);
+} */
+
+.border__bottom2 {
+    width: 100%;
+    max-width: 783px;
+    height: 1px;
+    background-color: #393C49;
+    margin-top: -18px; /* transform o‘rniga */
 }
+
 .setting__list{
     display: flex;
     justify-content: space-between;
