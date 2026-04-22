@@ -207,7 +207,7 @@
 .customer__status {
     width: 113px;
     height: 36px;
-    padding: 5px 18px;
+    padding: 5px 11px;
     border-radius: 30px;
     background-color: #50D1AA;
     color: white;
@@ -236,7 +236,7 @@
     }
 }
 
-.customer__status1 {
+.customer__status1{
     padding: 5px 24px;
     border-radius: 30px;
     background-color: #9290FE;
@@ -383,6 +383,16 @@
     .customer__name4 {
         display: flex;
         flex-direction: column;
+        p {
+            transform: translateX(-2px);
+        }
+    }
+
+    .customer__status, .customer__status1,.customer__status2{
+        width: 50px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
 
     .order__report {
@@ -407,22 +417,26 @@
     .customer__price {
         padding-left: 40px;
     }
-
-    .customer__name,
-    .customer__name1,
-    .customer__name2,
-    .customer__name3,
-    .customer__name4 {
-        p {
-            transform: translateX(-2px);
-        }
-    }
-
+    
     .most__ordered {
         transform: translateX(-20px);
     }
 
-    .customer__status,
+    .customer__status{
+        width: 90px;
+        height: 30px;
+        transform: translateX(-10px);
+
+        p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: translateX(-10px);
+            transform: translateY(-5px);
+            font-size: 15px;
+        } 
+    }
+
     .customer__status1,
     .customer__status2 {
         width: 90px;
@@ -490,7 +504,7 @@
 .most__header {
     background-color: #1F1D2B;
     width: 372px;
-    height: 429px;
+    height: 450px;
     padding: 24px;
     border-radius: 8px;
 }
@@ -532,12 +546,13 @@
     height: 210px;
     margin-top: 20px;
     transform: translateX(-30px);
+    margin-top: 10px;
 }
 
 .ordered__item {
     display: flex;
     justify-content: space-between;
-    width: 291px;
+    width: 231px;
 }
 
 .ordered__text {
@@ -553,6 +568,7 @@
     border: 1px solid var(--lightOrange);
     background-color: var(--mainDark);
     color: var(--lightOrange);
+    margin-top: 30px;
 }
 
 .order__type {
@@ -768,13 +784,13 @@
     .ordered__btn{
         width: 230px;
         transform: translateX(3px);
+        margin-bottom: 20px;
     }
     .customer__chart{
         transform: translateX(-10px);
     }
     .ordered__text{
         p{
-            transform: translateX(-50px);
             width: 180px;
             overflow: hidden;
             white-space: nowrap;
@@ -838,6 +854,15 @@
             overflow: hidden;
         }
     }
+    .most__dishes{
+        width: 180px;
+        h3{
+            width: 150px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
     .order__type{
         width: 250px;
         height: 550px;
@@ -851,7 +876,7 @@
     }
     .ordered__text{
         p{
-            transform: translateX(-80px);
+            transform: translateX(-25px);
             width: 150px;
             overflow: hidden;
             white-space: nowrap;
@@ -876,5 +901,10 @@
     }
     .order__type{
         transform: translateX(-30px);
+    }
+    .customer__status, .customer__status1,.customer__status2{
+        p{
+            font-size: 10px;
+        }
     }
 }

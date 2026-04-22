@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 import './Settings.css'
 
-function Settings({lang,setLang}) {
+function Settings({ lang }) {
     const [active, setActive] = useState('hot')
-    const [food,setFood] = useState([])
-    const [update,setUpdate] = useState(null)
+    const [food, setFood] = useState([])
+    const [update, setUpdate] = useState(null)
 
 
     function fnVal(e) {
@@ -12,114 +12,115 @@ function Settings({lang,setLang}) {
     }
 
     //ADD
-    function fnAdd(e){
+    function fnAdd(e) {
         e.preventDefault()
         let foodList = {
-            img:e.target.img.value,
-            title:e.target.title.value,
-            price:e.target.price.value,
-            bowls:e.target.bowls.value,
-            category:e.target.category.value
+            img: e.target.img.value,
+            title: e.target.title.value,
+            price: e.target.price.value,
+            bowls: e.target.bowls.value,
+            category: e.target.category.value
         }
-        fetch('https://69cfdd00a4647a9fc67614e2.mockapi.io/foodlist',{
-            method:'POST',
-            headers:{'content-type':'application/json'},
-            body:JSON.stringify(foodList)
+        fetch('https://69cfdd00a4647a9fc67614e2.mockapi.io/foodlist', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(foodList)
         })
-        .then((res)=>res.json())
-        .then(()=>{
-            fetch('https://69cfdd00a4647a9fc67614e2.mockapi.io/foodlist')
-            .then((res)=>res.json())
-            .then((data)=> setFood(data))
-        })
+            .then((res) => res.json())
+            .then(() => {
+                fetch('https://69cfdd00a4647a9fc67614e2.mockapi.io/foodlist')
+                    .then((res) => res.json())
+                    .then((data) => setFood(data))
+            })
     }
-    
+
 
     //DELETE
-    function fnDel(id){
-        fetch(`https://69cfdd00a4647a9fc67614e2.mockapi.io/foodlist/${id}`,{
-            method:'DELETE',
-            headers:{'content-type':'application/json'},
+    function fnDel(id) {
+        fetch(`https://69cfdd00a4647a9fc67614e2.mockapi.io/foodlist/${id}`, {
+            method: 'DELETE',
+            headers: { 'content-type': 'application/json' },
         })
-        .then((res)=>res.json())
-        .then(()=>{
-            fetch('https://69cfdd00a4647a9fc67614e2.mockapi.io/foodlist')
-            .then((res)=>res.json())
-            .then((data)=> setFood(data))
-        })
+            .then((res) => res.json())
+            .then(() => {
+                fetch('https://69cfdd00a4647a9fc67614e2.mockapi.io/foodlist')
+                    .then((res) => res.json())
+                    .then((data) => setFood(data))
+            })
     }
 
 
     //UPDATE
-    function fnUpdate(e){
+    function fnUpdate(e) {
         e.preventDefault()
         let foodList = {
-            img:e.target.img.value,
-            title:e.target.title.value,
-            price:e.target.price.value,
-            bowls:e.target.bowls.value,
-            category:e.target.category.value
+            img: e.target.img.value,
+            title: e.target.title.value,
+            price: e.target.price.value,
+            bowls: e.target.bowls.value,
+            category: e.target.category.value
         }
-        fetch(`https://69cfdd00a4647a9fc67614e2.mockapi.io/foodlist/${update}`,{
-            method:'PUT',
-            headers:{'content-type':'application/json'},
-            body:JSON.stringify(foodList)
+        fetch(`https://69cfdd00a4647a9fc67614e2.mockapi.io/foodlist/${update}`, {
+            method: 'PUT',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(foodList)
         })
-        .then((res)=>res.json())
-        .then(()=>{
-            fetch('https://69cfdd00a4647a9fc67614e2.mockapi.io/foodlist')
-            .then((res)=>res.json())
-            .then((data)=> setFood(data))
-        })
+            .then((res) => res.json())
+            .then(() => {
+                fetch('https://69cfdd00a4647a9fc67614e2.mockapi.io/foodlist')
+                    .then((res) => res.json())
+                    .then((data) => setFood(data))
+            })
     }
-    useEffect(()=>{
+    useEffect(() => {
         fetch('https://69cfdd00a4647a9fc67614e2.mockapi.io/foodlist')
-        .then((res)=>res.json())
-        .then((data)=> setFood(data))
-    },[])
+            .then((res) => res.json())
+            .then((data) => setFood(data))
+    }, [])
 
     return (
         <div className='Settings'>
-            <h3 className='settings__title'>Settings</h3>
+            <h3 className='settings__title'>{lang == 'RU' ? 'Настройки' : 'Sozlamalar'}</h3>
             <div className="product__management">
-                <h4>Product Management</h4>
+                <h4>{lang == 'RU' ? 'Управление продуктами' : 'Mahsulot boshqaruvi'}</h4>
+
                 <ul className="catgory__list">
                     <li className="category__item">
-                        <button className={active == 'hot' ? 'category__btn1 active' : 'category__btn1'} value={'hot'} onClick={fnVal}>Hot Dishes</button>
+                        <button className={active == 'hot' ? 'category__btn1 active' : 'category__btn1'} value={'hot'} onClick={fnVal}>{lang == 'RU' ? 'Горячие блюда' : 'Qaynoq taomlar'}</button>
                     </li>
                     <li className="category__item">
-                        <button className={active == 'cold' ? 'category__btn1 active' : 'category__btn1'} value={'cold'} onClick={fnVal}>Cold Dishes</button>
+                        <button className={active == 'cold' ? 'category__btn1 active' : 'category__btn1'} value={'cold'} onClick={fnVal}>{lang == 'RU' ? 'Холодные блюда' : 'Sovuq taomlar'}</button>
                     </li>
                     <li className="category__item">
-                        <button className={active == 'soup' ? 'category__btn1 active' : 'category__btn1'} value={'soup'} onClick={fnVal}>Soup</button>
+                        <button className={active == 'soup' ? 'category__btn1 active' : 'category__btn1'} value={'soup'} onClick={fnVal}>{lang == 'RU' ? 'Суп' : "Sho'rva"}</button>
                     </li>
                     <li className="category__item">
-                        <button className={active == 'grill' ? 'category__btn1 active' : 'category__btn1'} value={'grill'} onClick={fnVal}>Grill</button>
+                        <button className={active == 'grill' ? 'category__btn1 active' : 'category__btn1'} value={'grill'} onClick={fnVal}>{lang == 'RU' ? 'Гриль' : 'Gril'}</button>
                     </li>
                     <li className="category__item">
-                        <button className={active == 'appetizer' ? 'category__btn1 active' : 'category__btn1'} value={'appetizer'} onClick={fnVal}>Appetizer</button>
+                        <button className={active == 'appetizer' ? 'category__btn1 active' : 'category__btn1'} value={'appetizer'} onClick={fnVal}>{lang == 'RU' ? 'Закуска' : 'Aperatif'}</button>
                     </li>
                     <li className="category__item">
-                        <button className={active == 'dessert' ? 'category__btn1 active' : 'category__btn1'} value={'dessert'} onClick={fnVal}>Dessert</button>
+                        <button className={active == 'dessert' ? 'category__btn1 active' : 'category__btn1'} value={'dessert'} onClick={fnVal}>{lang == 'RU' ? 'Десерт' : 'Desert'}</button>
                     </li>
                     <li className="category__item">
-                        <button className={active == 'drinks' ? 'category__btn1 active' : 'category__btn1'} value={'drinks'} onClick={fnVal}>Drinks</button>
+                        <button className={active == 'drinks' ? 'category__btn1 active' : 'category__btn1'} value={'drinks'} onClick={fnVal}>{lang == 'RU' ? 'Напитки' : 'Ichimliklar'}</button>
                     </li>
                 </ul>
                 
                 <select
-          className="category__select"
-          value={active}
-          onChange={(e) => setActive(e.target.value)}
-        >
-          <option hidden value="hot">{lang == 'RU'? 'Горячее блюдо':'Qaynoq taom'}</option>
-          <option value="cold">{lang == 'RU'? 'Холодное блюдо':'Sovuq taom'}</option>
-          <option value="soup">{lang == 'RU'?'Суп':"Sho'rva"}</option>
-          <option value="grill">{lang == 'RU'?'Гриль':'Gril'}</option>
-          <option value="appetizer">{lang == 'RU'?'Закуска':'Aperatif'}</option>
-          <option value="dessert">{lang == 'RU'?'Десерт':'Desert'}</option>
-          <option value="drinks">{lang == 'RU'?'Напиток':'Ichimlik'}</option>
-        </select>
+                    className="category__select"
+                    value={active}
+                    onChange={(e) => setActive(e.target.value)}
+                >
+                    <option hidden value="hot">{lang == 'RU' ? 'Горячее блюдо' : 'Qaynoq taom'}</option>
+                    <option value="cold">{lang == 'RU' ? 'Холодное блюдо' : 'Sovuq taom'}</option>
+                    <option value="soup">{lang == 'RU' ? 'Суп' : "Sho'rva"}</option>
+                    <option value="grill">{lang == 'RU' ? 'Гриль' : 'Gril'}</option>
+                    <option value="appetizer">{lang == 'RU' ? 'Закуска' : 'Aperatif'}</option>
+                    <option value="dessert">{lang == 'RU' ? 'Десерт' : 'Desert'}</option>
+                    <option value="drinks">{lang == 'RU' ? 'Напиток' : 'Ichimlik'}</option>
+                </select>
 
                 <div className="border__bottom2"></div>
                 <ul className="setting__list">
@@ -127,43 +128,27 @@ function Settings({lang,setLang}) {
                         <div className="new__dish">
                             <div>
                                 <span>+</span>
-                                <p>{active == 'drinks'?'Add new drinks':'Add new dishes' && active == 'dessert'?'Add new desserts':'Add new dishes'}</p>
+                                <p>{active == 'drinks' ? 'Add new drinks' : 'Add new dishes' && active == 'dessert' ? 'Add new desserts' : 'Add new dishes'}</p>
                             </div>
                         </div>
                     </li>
                     {
-                        food.filter((item)=> item.category == active).map((item,index)=>(
+                        food.filter((item) => item.category == active).map((item, index) => (
                             <li className="settings__item" key={index}>
-                             <div className='settings__div'>
-                                 <img width={127} height={127} src={item.img} alt="" />
-                                 <p className='pt-2'>{item.title}</p>
-                                 <div className='d-flex gap-2 ps-4'>
-                                     <p>{item.price}</p>
-                                     <span>{item.bowls} {active == 'drinks'?'Bottles':'Bowls'}</span>
-                                 </div>
-                                 <div className="settings__control gap-2">
-                                     <button onClick={()=>fnDel(item.id)} className='btn btn-danger'><i className="bi bi-trash3"></i></button>
-                                     <button onClick={()=>setUpdate(item.id)} data-bs-toggle="modal" data-bs-target="#updateModal" className='btn btn-primary'><i className="bi bi-pencil"></i></button>
-                                 </div>
-                             </div>
-                         </li>
+                                <div className='settings__div'>
+                                    <img width={127} height={127} src={item.img} alt="" />
+                                    <p className='pt-2'>{item.title}</p>
+                                    <div className='d-flex gap-2 ps-4'>
+                                        <p>{item.price}</p>
+                                        <span>{item.bowls} {active == 'drinks' ? 'Bottles' : 'Bowls'}</span>
+                                    </div>
+                                    <div className="settings__control gap-2">
+                                        <button onClick={() => fnDel(item.id)} className='btn btn-danger'><i className="bi bi-trash3"></i></button>
+                                        <button onClick={() => setUpdate(item.id)} data-bs-toggle="modal" data-bs-target="#updateModal" className='btn btn-primary'><i className="bi bi-pencil"></i></button>
+                                    </div>
+                                </div>
+                            </li>
                         ))
-                    //     food.map((item,index)=>(
-                    //         <li className="settings__item" key={index}>
-                    //     <div className='settings__div'>
-                    //         <img width={127} height={127} src={item.img} alt="" />
-                    //         <p className='pt-2'>{item.title}</p>
-                    //         <div className='d-flex gap-2 ps-4'>
-                    //             <p>{item.price}</p>
-                    //             <span>{item.bowls} Bowls</span>
-                    //         </div>
-                    //         <div className="settings__control gap-2">
-                    //             <button onClick={()=>fnDel(item.id)} className='btn btn-danger'><i className="bi bi-trash3"></i></button>
-                    //             <button onClick={()=>setUpdate(item.id)} data-bs-toggle="modal" data-bs-target="#updateModal" className='btn btn-primary'><i className="bi bi-pencil"></i></button>
-                    //         </div>
-                    //     </div>
-                    // </li>
-                    //     ))
                     }
                 </ul>
             </div>
@@ -178,8 +163,8 @@ function Settings({lang,setLang}) {
                             <button type="button" className="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div className="modal-body">
-                            <form className='form-control w-100 form__control' onSubmit={fnAdd}>
-                                <input name='img' type="text" className='form-control w-100 form__input mt-2' placeholder='add img' />
+                            <form className='w-100 form__control' onSubmit={fnAdd}>
+                                <input name='img' type="text" className='form__input form-control w-100 mt-2' placeholder='add img' />
                                 <input name='title' type="text" className='form-control w-100 form__input mt-2' placeholder='add title' />
                                 <input name='price' type="text" className='form-control w-100 form__input mt-2' placeholder='add price' />
                                 <input name='bowls' type="text" className='form-control w-100 form__input mt-2' placeholder='add bowls' />

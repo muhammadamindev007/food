@@ -11,9 +11,6 @@
 }
 
 @media (max-width:880px) {
-    /* .Order{
-        width: 350px;
-    } */
     .order__comment{
         width: 320px;
         input{
@@ -71,20 +68,11 @@
     }
 }
 @media (max-width:740px) {
-    /* .Order{
-        width: 330px;
-    } */
     .order__menu{
         padding: 0px 10px;
     }
 }
 @media (max-width:730px) {
-    /* .order__comment{
-        width: 250px;
-        input{
-            width: 250px;
-        }
-    } */
     .order__menu{
         width: 300px;
     }
@@ -536,5 +524,18 @@
     }
     .confirm__control{
         transform: translateX(10px);
+    }
+}
+
+@media (max-width:420px) {
+    .order__inner{
+        transform: translateX(-20px);
+    }
+}
+@media (max-width:380px) {
+    .order__inner{
+        transform: translateX(-30px);
+        width: 200px;
+        padding: 0px -20px;
     }
 }

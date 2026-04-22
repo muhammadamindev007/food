@@ -9,7 +9,7 @@ import Login from './pages/Login/Login'
 import { useState } from 'react'
 
 function App() {
-  const [lang, setLang] = useState("UZ");
+  const [lang, setLang] = useState("RU");
   return (
     <div className='App'>
       <Header/>

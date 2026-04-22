@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import './Order.css'
 
-function Order() {
+function Order({lang}) {
     const [active, setActive] = useState(true)
     const [foodlist, setFoodlist] = useState([])
     const [left, setLeft] = useState(false)
@@ -48,17 +48,17 @@ function Order() {
     return (
         <div className={left ? 'Order order__right' : 'Order order__left'}>
             <div className="order__inner">
-                <h2 className='order__title'>Orders #34562</h2>
+            <h2 className='order__title'>{lang == 'RU'?'Заказы':'Buyurtmalar'} #34562</h2>
                 <ul className="order__list">
 
                     <li className="order__item">
-                        <button onClick={fnVal} value={'in'} className={active == 'in' ? 'order__btn active' : 'order__btn'}>Dine In</button>
+                        <button onClick={fnVal} value={'in'} className={active == 'in' ? 'order__btn active' : 'order__btn'}>{lang == 'RU'?'Поесть на месте':'Joyida ovqatlanish'}</button>
                     </li>
                     <li className="order__item">
-                        <button onClick={fnVal} value={'go'} className={active == 'go' ? 'order__btn active' : 'order__btn'}>To Go</button>
+                        <button onClick={fnVal} value={'go'} className={active == 'go' ? 'order__btn active' : 'order__btn'}>{lang == 'RU'?'С собой':'Olib ketish'}</button>
                     </li>
                     <li className="order__item">
-                        <button onClick={fnVal} value={'delivery'} className={active == 'delivery' ? 'order__btn active' : 'order__btn'}>Delivery</button>
+                        <button onClick={fnVal} value={'delivery'} className={active == 'delivery' ? 'order__btn active' : 'order__btn'}>{lang == 'RU'?'Доставка':'Yetkazish'}</button>
                     </li>
                 </ul>
                 <div className="order__info">

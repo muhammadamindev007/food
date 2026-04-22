@@ -1,8 +1,10 @@
 import React from 'react'
 import Chart from 'react-apexcharts'
 
-function RadialChart() {
+function RadialChart({lang}){
   const series = [78, 50, 70]
+
+  
 
   const chartOptions = {
     chart: {
