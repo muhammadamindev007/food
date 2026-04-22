@@ -107,7 +107,7 @@ function Settings({ lang }) {
                         <button className={active == 'drinks' ? 'category__btn1 active' : 'category__btn1'} value={'drinks'} onClick={fnVal}>{lang == 'RU' ? 'Напитки' : 'Ichimliklar'}</button>
                     </li>
                 </ul>
-                
+
                 <select
                     className="category__select"
                     value={active}
@@ -128,7 +128,13 @@ function Settings({ lang }) {
                         <div className="new__dish">
                             <div>
                                 <span>+</span>
-                                <p>{active == 'drinks' ? 'Add new drinks' : 'Add new dishes' && active == 'dessert' ? 'Add new desserts' : 'Add new dishes'}</p>
+                                <p>{active == 'drinks' ? (lang == 'RU' ? 'Добавить напиток' : 'Ichimlik kiriting') :
+                                    active == 'soup' ? (lang == 'RU' ? 'Добавить суп' : "Sho'rva kiriting") :
+                                    active == 'appetizer' ? (lang == 'RU' ? 'Добавить закуску' : 'Aperatif kiriting') :
+                                    active == 'dessert' ? (lang == 'RU' ? 'Добавить десерт' : 'Desert kiriting') :
+                                    active == 'cold' ? (lang == 'RU' ? 'Добавьте холодную еду' : 'Sovuq taom kiriting') :
+                                    active == 'grill' ? (lang == 'RU' ? 'Добавить гриль' : 'Grill kiriting') :
+                                    active == 'hot' ? (lang == 'RU' ? 'Добавьте горячую еду' : 'Qaynoq taom kiriting') : ''}</p>
                             </div>
                         </div>
                     </li>
