@@ -130,11 +130,11 @@ function Settings({ lang }) {
                                 <span>+</span>
                                 <p>{active == 'drinks' ? (lang == 'RU' ? 'Добавить напиток' : 'Ichimlik kiriting') :
                                     active == 'soup' ? (lang == 'RU' ? 'Добавить суп' : "Sho'rva kiriting") :
-                                    active == 'appetizer' ? (lang == 'RU' ? 'Добавить закуску' : 'Aperatif kiriting') :
-                                    active == 'dessert' ? (lang == 'RU' ? 'Добавить десерт' : 'Desert kiriting') :
-                                    active == 'cold' ? (lang == 'RU' ? 'Добавьте холодную еду' : 'Sovuq taom kiriting') :
-                                    active == 'grill' ? (lang == 'RU' ? 'Добавить гриль' : 'Grill kiriting') :
-                                    active == 'hot' ? (lang == 'RU' ? 'Добавьте горячую еду' : 'Qaynoq taom kiriting') : ''}</p>
+                                        active == 'appetizer' ? (lang == 'RU' ? 'Добавить закуску' : 'Aperatif kiriting') :
+                                            active == 'dessert' ? (lang == 'RU' ? 'Добавить десерт' : 'Desert kiriting') :
+                                                active == 'cold' ? (lang == 'RU' ? 'Добавьте холодную еду' : 'Sovuq taom kiriting') :
+                                                    active == 'grill' ? (lang == 'RU' ? 'Добавить гриль' : 'Grill kiriting') :
+                                                        active == 'hot' ? (lang == 'RU' ? 'Добавьте горячую еду' : 'Qaynoq taom kiriting') : ''}</p>
                             </div>
                         </div>
                     </li>
@@ -170,14 +170,14 @@ function Settings({ lang }) {
                         </div>
                         <div className="modal-body">
                             <form className='w-100 form__control' onSubmit={fnAdd}>
-                                <input name='img' type="text" className='form__input form-control w-100 mt-2' placeholder='add img' />
-                                <input name='title' type="text" className='form-control w-100 form__input mt-2' placeholder='add title' />
-                                <input name='price' type="text" className='form-control w-100 form__input mt-2' placeholder='add price' />
-                                <input name='bowls' type="text" className='form-control w-100 form__input mt-2' placeholder='add bowls' />
-                                <input name='category' type="text" className='form-control w-100 form__input mt-2' placeholder='add category' />
+                                <input name='img' type="text" className='form-control w-100 form__input mt-2' placeholder={lang == 'RU' ? 'добавить URL изображения' : 'rasm linkini kiriting'} />
+                                <input name='title' type="text" className='form-control w-100 form__input mt-2' placeholder={lang == 'RU' ? 'добавить заголовок' : 'sarlavhasini kiriting'} />
+                                <input name='price' type="text" className='form-control w-100 form__input mt-2' placeholder={lang == 'RU' ? 'добавить цену' : "narxini kiriting"} />
+                                <input name='bowls' type="text" className='form-control w-100 form__input mt-2' placeholder={lang == 'RU' ? 'добавить миски' : "idishlar sonini qo'shing"} />
+                                <input name='category' type="text" className='form-control w-100 form__input mt-2' placeholder={lang == 'RU' ? 'добавить категорию' : "kategoriya qo'shing"} />
                                 <div className="modal-footer">
-                                    <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button data-bs-dismiss="modal" type="submit" className="btn btn-primary">Save changes</button>
+                                    <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">{lang == 'RU' ? 'закрыть' : 'yopmoq'}</button>
+                                    <button data-bs-dismiss="modal" type="submit" className="btn btn-primary">{lang == 'RU' ? 'хранилище' : 'saqlash'}</button>
                                 </div>
                             </form>
                         </div>
@@ -190,19 +190,19 @@ function Settings({ lang }) {
                 <div className="modal-dialog">
                     <div className="modal-content modal__body">
                         <div className="modal-header">
-                            <h1 className="modal-title fs-5" id="exampleModalLabel">Add dish</h1>
+                            <h1 className="modal-title fs-5" id="exampleModalLabel">{lang == 'RU' ? 'Добавить еду' : "Taom qo'shing"}</h1>
                             <button type="button" className="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div className="modal-body">
                             <form className='form-control w-100 form__control' onSubmit={fnUpdate}>
-                                <input name='img' type="text" className='form-control w-100 form__input mt-2' placeholder='add img url' />
-                                <input name='title' type="text" className='form-control w-100 form__input mt-2' placeholder='add title' />
-                                <input name='price' type="text" className='form-control w-100 form__input mt-2' placeholder='add price' />
-                                <input name='bowls' type="text" className='form-control w-100 form__input mt-2' placeholder='add bowls' />
-                                <input name='category' type="text" className='form-control w-100 form__input mt-2' placeholder='add category' />
+                                <input name='img' type="text" className='form-control w-100 form__input mt-2' placeholder={lang == 'RU' ? 'добавить URL изображения' : 'rasm linkini kiriting'} />
+                                <input name='title' type="text" className='form-control w-100 form__input mt-2' placeholder={lang == 'RU' ? 'добавить заголовок' : 'sarlavhasini kiriting'} />
+                                <input name='price' type="text" className='form-control w-100 form__input mt-2' placeholder={lang == 'RU' ? 'добавить цену' : "narxini kiriting"} />
+                                <input name='bowls' type="text" className='form-control w-100 form__input mt-2' placeholder={lang == 'RU' ? 'добавить миски' : "idishlar sonini qo'shing"} />
+                                <input name='category' type="text" className='form-control w-100 form__input mt-2' placeholder={lang == 'RU' ? 'добавить категорию' : "kategoriya qo'shing"} />
                                 <div className="modal-footer">
-                                    <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button data-bs-dismiss="modal" type="submit" className="btn btn-primary">Save changes</button>
+                                    <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">{lang == 'RU' ? 'закрыть' : 'yopmoq'}</button>
+                                    <button data-bs-dismiss="modal" type="submit" className="btn btn-primary">{lang == 'RU' ? 'хранилище' : 'saqlash'}</button>
                                 </div>
                             </form>
                         </div>

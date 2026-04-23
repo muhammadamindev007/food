@@ -61,7 +61,7 @@ function Home({lang,setLang}) {
       <div className="container">
         <div className="home__info">
           <div className="home__title">
-            <h2>Wendy's Resto</h2>
+            <h2>Rayhon</h2>
             <p>{lang == 'RU'? 'Вторник, 2 февраля 2021 г.':'Seshanba, 2-fevral, 2021-yil'}</p>
           </div>
 
