@@ -160,21 +160,26 @@
     color: grey;
 }
 
+
+
+@media (max-width:404px) {
+    .new__dish{
+        width: 220px;
+    }
+    .settings__div{
+        transform: translateX(-10px);
+    }
+}
+
 @media (max-width:400px) {
     .product__management{
         transform: translateX(-25px);
     }
     .new__dish{
-        width: 220px;
+        width: 164px;
         height: 315px;
     }
-}
-
-@media (max-width:404px) {
-    .new__dish{
-        width: 171px;
-    }
     .settings__div{
-        transform: translateX(-10px);
+        transform: translateX(-30px);
     }
 }
