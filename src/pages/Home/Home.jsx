@@ -61,7 +61,7 @@ function Home({lang,setLang}) {
       <div className="container">
         <div className="home__info">
           <div className="home__title">
-            <h2>Rayhon</h2>
+            <h2>Forn lebnen</h2>
             <p>{lang == 'RU'? 'Вторник, 2 февраля 2021 г.':'Seshanba, 2-fevral, 2021-yil'}</p>
           </div>
 
@@ -146,7 +146,7 @@ function Home({lang,setLang}) {
                   <button onClick={() => fnSet(i.id)}><img src={i.img} alt="" /></button>
                   <p className='pt-2'>{i.title.slice(0, 20)}</p>
                   <p>{i.price}</p>
-                  <span>{i.bowls} {active == 'drinks' ? 'Bottles' : 'Bowls'} available</span>
+                  <span>{active == 'drinks'? (lang == 'RU'?`Есть ${i.bowls} бутылки`:`${i.bowls}-ta mavjud`):(lang == 'UZ'? `${i.bowls}-ta idishda mavjud`:`Есть ${i.bowls} тарелки`)}</span>
                 </div>
               </li>
             ))

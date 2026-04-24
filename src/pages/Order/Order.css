@@ -274,6 +274,9 @@
     width: 140px;
     height: 39px;
     margin-top: -30px;
+    span{
+        display: block;
+    }
 }
 
 .count{
@@ -345,6 +348,14 @@
 @media (max-width:1200px){
     .box__shadow{
         left: -550px;
+    }
+    .order__name{
+        span{
+            display: none;
+        }
+        p{
+            transform: translateY(20px);
+        }
     }
 }
 

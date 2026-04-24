@@ -62,8 +62,8 @@ function Order({lang}) {
                     </li>
                 </ul>
                 <div className="order__info">
-                    <p>Item</p>
-                    <div><p>Qty</p> <p>Price</p></div>
+                    <p>{lang == 'RU'?'Продукт':'Maxsulot'}</p>
+                    <div><p>{lang == 'RU'?'Кол-во':'Miqdori'}</p> <p>{lang == 'RU'?'Цена':'Narx'}</p></div>
                 </div>
                 <div className='bottom__line'></div>
             </div>
@@ -85,7 +85,7 @@ function Order({lang}) {
                                 </div>
                             </div>
                             <div className="order__comment">
-                                <input type="text" placeholder='Order Note...' />
+                                <input type="text" placeholder={lang == 'RU'?'Примечание к заказу...':'Buyurtma eslatmasi'} />
                                 <div className="delete">
                                     <button onClick={() => fnDel(item.id)}><i className="bi bi-trash3"></i></button>
                                 </div>
@@ -96,45 +96,45 @@ function Order({lang}) {
             </ul>
             <div className="payment__footer">
                 <div className="discount">
-                    <span>Discount</span>
+                    <span>{lang == 'RU'?'Скидка':'Chegirma'}</span>
                     <p>$0</p>
                 </div>
                 <div className="total">
-                    <span>Sub total</span>
+                    <span>{lang == 'RU'?'Итого':'Jami'}</span>
                     <p>$ {totalPrice.toFixed(2)}</p>
                 </div>
-                <button className={left ? 'display__none' : 'display__block'} onClick={() => setLeft(true)}>Continue to Payment</button>
+                <button className={left ? 'display__none' : 'display__block'} onClick={() => setLeft(true)}>{lang == 'RU'?'Продолжить оплату':"To'lovni davom ettrish"}</button>
             </div>
 
             <div className={left?'payment__methods display__blok':'payment__methods display__none'}>
                 <div className="methods__header">
-                    <h3>Payment</h3>
-                    <p>3 payment methods available</p>
+                    <h3>{lang == 'RU'?'Оплата':"To'lov"}</h3>
+                    <p>{lang == 'RU'?'Доступны 3 способа оплаты.':"3ta to'lov usuli mavjud"}</p>
                 </div>
                 <div className="bottom__line2"></div>
-                <p className='text-light fs-5 ps-4 pt-3'>Payment Method</p>
+                <p className='text-light fs-5 ps-4 pt-3'>{lang == 'RU'?'Способ оплаты':"To'lov usuli"}</p>
                 <div className="payment__list">
                     <button onClick={()=>setPayment('credit')} className={payment=='credit'?"payment__item active1":"payment__item"}>
                         <i className='bi bi-credit-card'></i>
-                        <span>Credit Card</span>
+                        <span>{lang == 'RU'?'Кредитная карта':'Kredit karta'}</span>
                     </button>
                     <button onClick={()=>setPayment('paypal')} className={payment == 'paypal'?"payment__item active1":"payment__item"}>
                         <i className="bi bi-paypal"></i>
-                        <span>Paypal</span>
+                        <span>{lang == 'RU'?'ПайПал':'Paypal'}</span>
                     </button>
                     <button onClick={()=>setPayment('cash')} className={payment == 'cash'?"payment__item active1":"payment__item"}>
                         <i className="bi bi-cash"></i>
-                        <span>Cash</span>
+                        <span>{lang == 'RU'?'Наличные':'Naqd'}</span>
                     </button>
                 </div>
                 <div className='payment__inputs'>
-                <p>Cardholder Name</p>
+                <p>{lang == 'RU'?'Имя владельца карты':'Karta egasi ismi'}</p>
                 <input className='w-100' type="text" placeholder='Levi Ackerman'/>
-                <p className='pt-4'>Card Number</p>
+                <p className='pt-4'>{lang == 'RU'?'Номер карты':'Karta raqami'}</p>
                 <input className='w-100' type="text" placeholder='2564 1421 0897 1244'/>
                 <div className="payment__date pt-5">
                 <div className="payment__inner">
-                <p>Expiration Date</p>
+                <p>{lang == 'RU'?'Expiration Date':'Muddat sanasi'}</p>
                 <input type="text" placeholder='02/2022'/>
                 </div>
                 <div className="payment__inner">
@@ -144,7 +144,7 @@ function Order({lang}) {
             </div>
             <div className="confirm__control">
                 <button className='confirm__btn' onClick={()=>setLeft(false)}>Cancel</button>
-                <button className='confirm__btn'>Confirm Payment</button>
+                <button className='confirm__btn'>{lang == 'RU'?'Подтвердить платеж':"To'lovni davom ettirish"}</button>
             </div>
             </div>
             </div>

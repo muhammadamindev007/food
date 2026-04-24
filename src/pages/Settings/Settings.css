@@ -1,8 +1,8 @@
 .Settings {
     background-color: var(--lightDark);
-    width: 100%;
     min-height: 100vh;
     padding: 20px 30px;
+    overflow: hidden;
 }
 
 
@@ -65,7 +65,7 @@
     padding-bottom: 30px;
     margin-left: -30px;
 }
-.settings__item {
+.settings__item{
     border: 1px solid var(--lightOrange);
     border-radius: 8px;
     overflow: hidden;
@@ -92,19 +92,12 @@
     }
     
 }
-.new__dish{
-    margin-top: 10px;
-    height: 340px;
-    width: 221px;
-    border: 2px dashed var(--lightOrange);
-    border-radius: 8px;
-    overflow: hidden;
-}
 .settings__control{
     display: flex;
     justify-content: space-evenly;
     width: 100px;
     padding-left: 35px;
+    padding-bottom: 10px;
     button{
         width: 40px;
     }
@@ -117,6 +110,12 @@
     justify-content: center;
     color: var(--lightOrange);
     padding-top: 50%;
+    margin-top: 10px;
+    height: 385px;
+    width: 221px;
+    border: 2px dashed var(--lightOrange);
+    border-radius: 8px;
+    overflow: hidden;
     div{
         display: flex;
         justify-content: space-between;
@@ -129,6 +128,14 @@
         span{
             font-size: 40px;
         }
+    }
+}
+.new__dish:hover{
+    background-color: var(--lightOrange);
+    border: 2px dashed var(--mainDark);
+    transition: all ease 0.3s;
+    p,span{
+        color: var(--mainDark);
     }
 }
 
@@ -160,5 +167,14 @@
     .new__dish{
         width: 220px;
         height: 315px;
+    }
+}
+
+@media (max-width:404px) {
+    .new__dish{
+        width: 171px;
+    }
+    .settings__div{
+        transform: translateX(-10px);
     }
 }

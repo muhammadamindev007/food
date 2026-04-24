@@ -74,7 +74,8 @@ function Pie({lang,setLang}) {
                     <p className='customer__food'>Hot spicy fried rice with omelet</p>
                     <p className='customer__price'>$125</p>
                     <div className="customer__status">
-                        <p title={lang == 'RU'?'Завершенный':'Tasdiqlangan'} className='status__food'>{lang == 'RU'?'Завершенный':'Tasdiqlangan'}</p>
+                        <span title={lang == 'RU'?'Завершенный':'Tasdiqlangan'} className='status__food'>{lang == 'RU'?'Завершенный':'Tasdiqlangan'}</span>
+                        <i class="bi bi-check2 status__accepted"></i>
                     </div>
                 </div>
                 <div className="customer__info">
@@ -85,7 +86,8 @@ function Pie({lang,setLang}) {
                     <p className='customer__food'>Hot spicy fried rice with omelet</p>
                     <p className='customer__price'>$145</p>
                     <div className="customer__status1">
-                        <p title={lang == 'RU'?'Подготовка':'Tayyorlanayabdi'} className='status__food'>{lang == 'RU'?'Подготовка':'Tayyorlanayabdi'}</p>
+                        <span title={lang == 'RU'?'Подготовка':'Tayyorlanayabdi'} className='status__food'>{lang == 'RU'?'Подготовка':'Tayyorlanayabdi'}</span>
+                        <i class="bi bi-hourglass-top"></i>
                     </div>
                 </div>
                 <div className="customer__info">
@@ -96,7 +98,8 @@ function Pie({lang,setLang}) {
                     <p className='customer__food'>Hot spicy fried rice with omelet</p>
                     <p className='customer__price'>$105</p>
                     <div className="customer__status2">
-                        <p title={lang == 'RU'?'В ожидании':'Kutilayabdi'} className='status__food'>{lang == 'RU'?'В ожидании':'Kutilayabdi'}</p>
+                        <span title={lang == 'RU'?'В ожидании':'Kutilayabdi'} className='status__food'>{lang == 'RU'?'В ожидании':'Kutilayabdi'}</span>
+                        <i class="bi bi-hourglass-split status__accepted"></i>
                     </div>
                 </div>
                 <div className="customer__info">
@@ -107,7 +110,8 @@ function Pie({lang,setLang}) {
                     <p className='customer__food'>Hot spicy fried rice with omelet</p>
                     <p className='customer__price'>$45</p>
                     <div className="customer__status">
-                        <p title={lang == 'RU'?'Завершенный':'Tasdiqlangan'} className='status__food'>{lang == 'RU'?'Завершенный':'Tasdiqlangan'}</p>
+                        <span title={lang == 'RU'?'Завершенный':'Tasdiqlangan'} className='status__food'>{lang == 'RU'?'Завершенный':'Tasdiqlangan'}</span>
+                        <i class="bi bi-check2 status__accepted"></i>
                     </div>
                 </div>
                 <div className="customer__info">
@@ -118,7 +122,8 @@ function Pie({lang,setLang}) {
                     <p className='customer__food'>Hot spicy fried rice with omelet</p>
                     <p className='customer__price'>$245</p>
                     <div className="customer__status">
-                        <p title={lang == 'RU'?'Завершенный':'Tasdiqlangan'} className='status__food'>{lang == 'RU'?'Завершенный':'Tasdiqlangan'}</p>
+                        <span title={lang == 'RU'?'Завершенный':'Tasdiqlangan'} className='status__food'>{lang == 'RU'?'Завершенный':'Tasdiqlangan'}</span>
+                        <i class="bi bi-check2 status__accepted"></i>
                     </div>
                 </div>
             </div>

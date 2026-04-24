@@ -144,10 +144,14 @@ function Settings({ lang }) {
                                 <div className='settings__div'>
                                     <img width={127} height={127} src={item.img} alt="" />
                                     <p className='pt-2'>{item.title}</p>
-                                    <div className='d-flex gap-2 ps-4'>
+                                    {/* <div className='d-flex gap-2 ps-4'>
                                         <p>{item.price}</p>
+                                        <span>{active == 'drinks'? (lang == 'RU'?`Есть ${item.bowls} бутылки`:`${item.bowls}-ta mavjud`):(lang == 'UZ'? `${item.bowls}-ta idishda mavjud`:`Есть ${item.bowls} тарелки`)}</span>
                                         <span>{item.bowls} {active == 'drinks' ? 'Bottles' : 'Bowls'}</span>
-                                    </div>
+                                    </div> */}
+                                     <p>{item.price}</p>
+                                        <span className='pb-3'>{active == 'drinks'? (lang == 'RU'?`Есть ${item.bowls} бутылки`:`${item.bowls} dona mavjud`):(lang == 'UZ'? `${item.bowls} idishda mavjud`:`Есть ${item.bowls} тарелки`)}</span>
+
                                     <div className="settings__control gap-2">
                                         <button onClick={() => fnDel(item.id)} className='btn btn-danger'><i className="bi bi-trash3"></i></button>
                                         <button onClick={() => setUpdate(item.id)} data-bs-toggle="modal" data-bs-target="#updateModal" className='btn btn-primary'><i className="bi bi-pencil"></i></button>
@@ -165,7 +169,7 @@ function Settings({ lang }) {
                 <div className="modal-dialog">
                     <div className="modal-content modal__body">
                         <div className="modal-header">
-                            <h1 className="modal-title fs-5" id="exampleModalLabel">Add dish</h1>
+                            <h1 className="modal-title fs-5" id="exampleModalLabel">{lang == 'RU' ? 'Добавьте еду или напитки' : "Taom yoki ichimlik qo'shing"}</h1>
                             <button type="button" className="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div className="modal-body">
@@ -190,7 +194,7 @@ function Settings({ lang }) {
                 <div className="modal-dialog">
                     <div className="modal-content modal__body">
                         <div className="modal-header">
-                            <h1 className="modal-title fs-5" id="exampleModalLabel">{lang == 'RU' ? 'Добавить еду' : "Taom qo'shing"}</h1>
+                            <h1 className="modal-title fs-5" id="exampleModalLabel">{lang == 'RU' ? 'Добавьте еду или напитки' : "Taom yoki ichimlik qo'shing"}</h1>
                             <button type="button" className="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div className="modal-body">
