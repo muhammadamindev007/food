@@ -1,9 +1,8 @@
 import './Profil.css'
 import profilPic from '../../assets/img/reader-img.png'
-import star from '../../assets/img/star.png'
 import { useEffect, useState } from 'react'
 
-function Profil() {
+function Profil({lang}) {
   const [users,setUsers] = useState([])
 
   useEffect(()=>{
@@ -14,16 +13,13 @@ function Profil() {
 
   let admin = users.find((item)=> item.name == 'admin' && item.email == 'admin@gmail.com')
   let user = users.find((item)=> item.name == 'ali' && item.email == 'ali@gmail.com')
-  
-  // let foundAdmin = users.find((item)=> item.name == 'admin')
-  // let foundUser = users.find((item)=> item.name == 'ali')
 
   let user__found = window.localStorage.getItem('user')
    
   
   return (
     <div className='Profil'>
-      <h1 className='profil__title'>Profil</h1>
+      <h1 className='profil__title'>{lang == 'RU'?'Профиль':'Profil'}</h1>
 
       <div className="profil__info">
           <div className="profil__inner">
@@ -37,9 +33,9 @@ function Profil() {
           <div className="reader__bio">
           <div>
             <h1 className='reader__title'>{JSON.parse(user__found).name == 'admin'? admin?.name:user?.name}</h1>
-            <span><p>Telefon raqami: </p>{JSON.parse(user__found).name == 'admin'? admin?.number:user?.number}</span>
-            <span><p>Emaili: </p> {JSON.parse(user__found).name == 'admin'?admin?.email:user?.email}</span>
-            <span><p>Bio: </p> Front-end developer and Start-upper</span>
+            <span><p>{lang == 'RU'?'Номер телефона':'Telefon raqami'}: </p>{JSON.parse(user__found).name == 'admin'? admin?.number:user?.number}</span>
+            <span><p>{lang == 'RU'?'Электронная почта':'E-mail'}: </p> {JSON.parse(user__found).name == 'admin'?admin?.email:user?.email}</span>
+            <span><p>{lang == 'RU'?'Био':'Bio'}: </p> {lang == 'RU'?'Фронтенд-разработчик и стартап-разработчик':"Front-end dasturchi va boshlang'ich dasturchi"}</span>
             </div>
           </div>
           </div>
