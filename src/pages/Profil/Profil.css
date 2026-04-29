@@ -1,0 +1,155 @@
+.Profil{
+    padding: 13px 20px;
+}
+.profil__title{
+    color: white;
+    text-transform: capitalize;
+}
+.profil__info{
+    width: 882px;
+    height: 222px;
+    border-radius: 15px;
+    background-color: var(--mainDark);
+    background-position: right;
+    background-repeat: no-repeat;
+    margin-top: 30px;
+
+    .profil__inner{
+        width: 543px;
+        height: 228px;
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 33px;
+        padding-left: 43px;
+        .reader__profil{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            .profil__img{
+                border-radius: 50%;
+                position: relative;
+                z-index: 1;
+            }
+            .star{
+                margin-top: 115px;
+                transform: translateX(-24px);
+                position: relative;
+                z-index: 3;
+            }
+            .profil__img::before{
+                content: '';
+                display: block;
+                width: 50px;
+                height: 50px;
+                background-repeat: no-repeat;
+                position: absolute;
+                z-index: 2;
+                bottom: -0px;
+                left: 70%;
+            }
+            p{
+                font-size: 22px;
+                color: #C9AC8C;
+                padding-top: 15px;
+            }
+            h4{
+                font-size: 22px;
+                color: white;
+            }
+        }
+        .reader__bio{
+            span{
+                color: grey;
+                display: flex;
+                p{
+                    color: white;
+                }
+            }
+        }
+        .reader__title{
+            font-size: 32px;
+            color: white;
+            text-transform: capitalize;
+        }
+    }
+
+}
+
+@media (max-width:1000px) {
+    .profil__info{
+        width: 700px;
+    }
+}
+
+@media (max-width:830px) {
+    .profil__info{
+        width: 600px;
+    }
+}
+
+@media (max-width:730px) {
+    .profil__inner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .profil__info{
+        height: 450px;
+        padding-top: 20px;
+        padding-right: 30px;
+        width: 500px;
+        display: flex;
+        justify-content: center;
+        
+    }
+}
+
+@media (max-width:630px) {
+    .profil__info{
+        width: 400px;
+        height: 380px;
+    }
+    .profil__img{
+        width: 130px;
+        height: 130px;
+    }
+    .profil__img::before{
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width:530px){
+    .profil__info{
+        width: 300px;
+        height: 400px;
+    }
+    .profil__img{
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width:430px) {
+    .Profil{
+        padding: 20px 10px;
+    }
+    .profil__info{
+        width: 260px;
+    }
+    .profil__img{
+        width: 70px;
+        height: 70px;
+    }
+    .profil__inner{
+        span{
+            width: 240px;
+        }
+    }
+    .reader__title{
+        font-size: 10px;
+    }
+}

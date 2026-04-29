@@ -75,7 +75,7 @@ function Pie({lang,setLang}) {
                     <p className='customer__price'>$125</p>
                     <div className="customer__status">
                         <span title={lang == 'RU'?'Завершенный':'Tasdiqlangan'} className='status__food'>{lang == 'RU'?'Завершенный':'Tasdiqlangan'}</span>
-                        <i class="bi bi-check2 status__accepted"></i>
+                        <i className="bi bi-check2 status__accepted"></i>
                     </div>
                 </div>
                 <div className="customer__info">
@@ -87,7 +87,7 @@ function Pie({lang,setLang}) {
                     <p className='customer__price'>$145</p>
                     <div className="customer__status1">
                         <span title={lang == 'RU'?'Подготовка':'Tayyorlanayabdi'} className='status__food'>{lang == 'RU'?'Подготовка':'Tayyorlanayabdi'}</span>
-                        <i class="bi bi-hourglass-top"></i>
+                        <i className="bi bi-hourglass-top  status__accepted"></i>
                     </div>
                 </div>
                 <div className="customer__info">
@@ -99,7 +99,7 @@ function Pie({lang,setLang}) {
                     <p className='customer__price'>$105</p>
                     <div className="customer__status2">
                         <span title={lang == 'RU'?'В ожидании':'Kutilayabdi'} className='status__food'>{lang == 'RU'?'В ожидании':'Kutilayabdi'}</span>
-                        <i class="bi bi-hourglass-split status__accepted"></i>
+                        <i className="bi bi-hourglass-split status__accepted"></i>
                     </div>
                 </div>
                 <div className="customer__info">
@@ -111,7 +111,7 @@ function Pie({lang,setLang}) {
                     <p className='customer__price'>$45</p>
                     <div className="customer__status">
                         <span title={lang == 'RU'?'Завершенный':'Tasdiqlangan'} className='status__food'>{lang == 'RU'?'Завершенный':'Tasdiqlangan'}</span>
-                        <i class="bi bi-check2 status__accepted"></i>
+                        <i className="bi bi-check2 status__accepted"></i>
                     </div>
                 </div>
                 <div className="customer__info">
@@ -123,7 +123,7 @@ function Pie({lang,setLang}) {
                     <p className='customer__price'>$245</p>
                     <div className="customer__status">
                         <span title={lang == 'RU'?'Завершенный':'Tasdiqlangan'} className='status__food'>{lang == 'RU'?'Завершенный':'Tasdiqlangan'}</span>
-                        <i class="bi bi-check2 status__accepted"></i>
+                        <i className="bi bi-check2 status__accepted"></i>
                     </div>
                 </div>
             </div>

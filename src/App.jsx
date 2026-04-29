@@ -7,6 +7,7 @@ import Pie from './pages/Pie/Pie'
 import Settings from './pages/Settings/Settings'
 import Login from './pages/Login/Login'
 import { useState } from 'react'
+import Profil from './pages/Profil/Profil'
 
 function App() {
   const [lang, setLang] = useState("RU");
@@ -19,6 +20,7 @@ function App() {
         <Route path='/settings' element={<Settings lang={lang} setLang={setLang}/>}/>
         <Route path='/' element={<Login lang={lang} setLang={setLang}/>}/>
         <Route path='/order' element={<Order lang={lang} setLang={setLang}/>}/>
+        <Route path='/profil' element={<Profil lang={lang} setLang={setLang}/>}/>
       </Routes>
     </div>
   )

@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { Context } from '../Context/Context'
 
 
-function Login() {
+function Login({lang,setLang}) {
     const [show,setShow] = useState(true)
     const [data,setData] = useState([])
     const [confirm,setConfirm] = useState(false)
@@ -43,7 +43,7 @@ function Login() {
         e.preventDefault()
         let user__list = {
             name:e.target.name.value,
-            password:e.target.password.value,
+            password:e.target.password.value
         }
         const finUser = data.find((item)=>(
             item.name == user__list.name && item.password == user__list.password
@@ -66,31 +66,32 @@ function Login() {
         .then((res)=>res.json())
         .then((users)=>setData(users))
     },[])
+    
 
   return (
     <div className='Login'>
         {
             show?<div className="sign__up">
             <form className='form-control w-75 m-auto form__login' onSubmit={fnUp}>
-                <input type="text" className='text-light form-control w-100 mt-3 login__control' placeholder='enter your name' name='name'/>
-                <input type="text" className='text-light form-control w-100 mt-3 login__control' placeholder='enter your email' name='email'/>
-                <input type="text" className='text-light form-control w-100 mt-3 login__control' placeholder='enter your phone number' name='number'/>
-                <input type="text" className={confirm?'text-light form-control w-100 mt-3 login__control bg-danger':'text-light form-control w-100 mt-3 login__control'} placeholder='enter password' name='password'/>
-                <input type="text" className={confirm?'text-light form-control w-100 mt-3 login__control bg-danger':'text-light form-control w-100 mt-3 login__control'} placeholder='confirm password' name='confirm'/>
-                <button type='submit' className='btn btn-primary mt-3'>Sign up</button>
+                <input type="text" className='text-light form-control w-100 mt-3 login__control' placeholder={lang == 'RU'?'введите свое имя':'ismingizmni kiriting'} name='name'/>
+                <input type="text" className='text-light form-control w-100 mt-3 login__control' placeholder={lang == 'RU'?'введите свой адрес электронной почты':'emailingizni kiriting'} name='email'/>
+                <input type="text" className='text-light form-control w-100 mt-3 login__control' placeholder={lang == 'RU'?'введите свой номер телефона':'telefon nomeringizni kiriting'} name='number'/>
+                <input type="text" className={confirm?'text-light form-control w-100 mt-3 login__control bg-danger':'text-light form-control w-100 mt-3 login__control'} placeholder={lang == 'RU'?'введите пароль':'parol kiriting'} name='password'/>
+                <input type="text" className={confirm?'text-light form-control w-100 mt-3 login__control bg-danger':'text-light form-control w-100 mt-3 login__control'} placeholder={lang == 'RU'?'подтвердите свой пароль':'parolingizni kiriting'} name='confirm'/>
+                <button type='submit' className='btn btn-primary mt-3'>{lang == 'RU'?'Зарегистрироваться':'roʻyxatdan oʻtish'}</button>
                 <div className='mt-2 mb-3 d-flex justify-content-between already'>
-                    <p className='text-light'>Already have an account ?</p>
-                    <button onClick={()=>setShow(false)} className='btn btn-link'>Sign In</button>
+                    <p className='text-light'>{lang == 'RU'?'У вас уже есть аккаунт':'Sizda allaqachon akkaunt bormi'} ?</p>
+                    <button onClick={()=>setShow(false)} className='btn btn-link'>{lang == 'RU'?'Войти':'Tizimga kirish'}</button>
                 </div>
             </form>
             </div>
             :
             <div className="sign__in">
             <form className='form-control w-75 m-auto form__login' onSubmit={fnIn}>
-            <input type="text" className='text-light form-control w-100 mt-3 login__control' placeholder='enter your name' name='name'/>
-            <input type="text" className='text-light form-control w-100 mt-3 login__control' placeholder='enter password' name='password'/>
+            <input type="text" className='text-light form-control w-100 mt-3 login__control' placeholder={lang == 'RU'?'введите свое имя':'ismingizmni kiriting'} name='name'/>
+            <input type="text" className={confirm?'text-light form-control w-100 mt-3 login__control bg-danger':'text-light form-control w-100 mt-3 login__control'} placeholder={lang == 'RU'?'подтвердите свой пароль':'parolingizni kiriting'} name='password'/>
              <div className='mt-3 mb-3'>
-                    <button type='submit' className='btn btn-primary'>Sign In</button>
+                    <button type='submit' className='btn btn-primary'>{lang == 'RU'?'Войти':'Tizimga kirish'}</button>
                 </div>
             </form>
         </div>

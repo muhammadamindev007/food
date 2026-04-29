@@ -482,7 +482,7 @@
     background: rgba(234,124,105,0.15);
 }
 
-@media (max-width:680px) {
+@media (max-width:725px) {
     .Order {
         display: none;
     }

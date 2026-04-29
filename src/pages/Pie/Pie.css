@@ -183,7 +183,7 @@
     padding-left: 15px;
 }
 
-.customer__name {
+.customer__name{
     display: flex;
     justify-content: space-between;
     width: 154px;
@@ -203,7 +203,7 @@
     transform: translateX(-20px);
 }
 
-.customer__price {
+.customer__price{
     transform: translateX(-20px);
 }
 
@@ -262,7 +262,6 @@
     color: white;
     transform: translateX(30px);
     p{
-        /* transform: translateX(-10px); */
         width: 100px;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -336,7 +335,7 @@
 }
 
 .most__ordered{
-    max-width: 372px;
+    max-width: 472px;
     background-color: var(--lightDark);
     border: 1px solid #393C49;
     padding: 25px;

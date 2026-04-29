@@ -1,6 +1,6 @@
-.Header {
+.Header{
     background-color: var(--mainDark);
-    width: 96px;
+    width: 90px;
     min-height: 100vh;
 }
 
@@ -12,7 +12,6 @@
     text-align: center;
     min-height: 100vh;
     padding-top: 20px;
-
     a {
         width: 92px;
         height: 52px;
@@ -30,6 +29,9 @@
         color: var(--lightOrange);
         font-size: 20px;
     }
+    .logo__img__on{
+        display: block;
+    }
 
     @media (max-width:1440px) {
         .nav__item {
@@ -44,14 +46,13 @@
         }
 
         .nav__list {
-            width: 70px;
+            width: 96px;
         }
 
         .Header {
             width: 70px;
         }
     }
-
     @media (max-width:420px) {
         .Header{
             width: 70px;

@@ -11,9 +11,13 @@ function Header() {
   return (
     <div className='Header'>
         <nav className="nav__list">
-            <Link to={'/home'}><img src={logo} alt="" /></Link>
+            <Link className='logo__img__on' to={'/home'}><img src={logo} alt="" /></Link>
             <div><Link className={location == '/home'? 'nav__item active':'nav__item'} to={'/home'}><i className="header__link bi bi-house"></i></Link></div>
-            <div><Link className={location == '/pie'?'nav__item active':'nav__item'} to={'/pie'}><i className="header__link bi bi-pie-chart"></i></Link></div> 
+            <div>
+              {
+                user?.name == 'admin' && <Link className={location == '/pie'?'nav__item active':'nav__item'} to={'/pie'}><i className="header__link bi bi-pie-chart"></i></Link>
+              }
+            </div> 
             <div>
               {
                 user?.name == 'admin' && 
@@ -22,6 +26,9 @@ function Header() {
                 </Link>
               }
             </div>
+            <div>
+              <Link className={location == '/profil'? 'nav__item active':'nav__item'} to={'/profil'}>
+              <i className="header__link bi bi-person"></i></Link></div>
         </nav>
     </div>
   )

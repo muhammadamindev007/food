@@ -34,6 +34,7 @@ function Home({lang,setLang}) {
 
   useEffect(() => {
     fetch('https://69cfdd00a4647a9fc67614e2.mockapi.io/foodlist')
+    // fetch('https://pastor-absolute-cataract.ngrok-free.dev/foodlist')
       .then((res) => res.json())
       .then((data) => setFood(data))
   }, [])
