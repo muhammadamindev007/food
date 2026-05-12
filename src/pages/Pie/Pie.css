@@ -207,7 +207,8 @@
     transform: translateX(-20px);
 }
 
-.customer__status{
+
+/* .customer__status{
     width: 113px;
     height: 36px;
     overflow: hidden;
@@ -230,6 +231,55 @@
 }
 .status__food{
     display: block;
+} */
+
+.customer__status,
+.customer__status1,
+.customer__status2{
+    width: 130px;
+    height: 36px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    overflow: visible;
+    white-space: nowrap;
+
+    padding: 5px 12px;
+    border-radius: 30px;
+
+    color: white;
+    transform: translateX(30px);
+}
+
+/* HAR BIR STATUS UCHUN ALOHIDA ORQA FON */
+.customer__status{
+    background-color: #50D1AA;
+}
+
+.customer__status1{
+    background-color: #9290FE;
+}
+
+.customer__status2{
+    background-color: #FFB572;
+}
+
+/* ICON STYLE */
+.status__accepted{
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* TEXT */
+.status__food{
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .customer__name1 {

@@ -33,8 +33,8 @@ function Profil({lang}) {
           <div className="reader__bio">
           <div>
             <h1 className='reader__title'>{JSON.parse(user__found).name == 'admin'? admin?.name:user?.name}</h1>
-            <span><p>{lang == 'RU'?'Номер телефона':'Telefon raqami'}: </p>{JSON.parse(user__found).name == 'admin'? admin?.number:user?.number}</span>
-            <span><p>{lang == 'RU'?'Электронная почта':'E-mail'}: </p> {JSON.parse(user__found).name == 'admin'?admin?.email:user?.email}</span>
+            <span><p>{lang == 'RU'?'Номер':'Telefon raqami'}: </p>{JSON.parse(user__found).name == 'admin'? admin?.number:user?.number}</span>
+            <span><p>{lang == 'RU'?'Э-почта':'E-mail'}: </p> {JSON.parse(user__found).name == 'admin'?admin?.email:user?.email}</span>
             <span><p>{lang == 'RU'?'Био':'Bio'}: </p> {lang == 'RU'?'Фронтенд-разработчик и стартап-разработчик':"Front-end dasturchi va boshlang'ich dasturchi"}</span>
             </div>
           </div>

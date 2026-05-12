@@ -86,8 +86,8 @@ function Order({lang}) {
                             </div>
                             <div className="order__comment">
                                 <input type="text" placeholder={lang == 'RU'?'Примечание к заказу...':'Buyurtma eslatmasi'} />
-                                <div className="delete">
-                                    <button onClick={() => fnDel(item.id)}><i className="bi bi-trash3"></i></button>
+                                <div className="delete" onClick={() => fnDel(item.id)}>
+                                    <button><i className="bi bi-trash3"></i></button>
                                 </div>
                             </div>
                         </li>
