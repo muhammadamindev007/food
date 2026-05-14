@@ -5,7 +5,7 @@
 }
 
 
-.nav__list {
+.nav__list{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
