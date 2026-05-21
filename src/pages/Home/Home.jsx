@@ -7,17 +7,17 @@ function Home({lang,setLang}) {
   const [active, setActive] = useState('hot')
   const [search, setSearch] = useState("")
   const [foodlist, setFoodlist] = useState(JSON.parse(localStorage.getItem('foodlist') || '[]'))
-  const [food, setFood] = useState([])
+  const [food,setFood] = useState([])
 
-  const [open, setOpen] = useState(false);
+  const [open,setOpen] = useState(false);
   
 
 
-  function fnVal(e) {
+  function fnVal(e){
     setActive(e.target.value);
   }
 
-  function fnSearch(e) {
+  function fnSearch(e){
     e.preventDefault()
     setSearch(e.target.name.value)
   }
@@ -34,7 +34,6 @@ function Home({lang,setLang}) {
 
   useEffect(() => {
     fetch('https://69cfdd00a4647a9fc67614e2.mockapi.io/foodlist')
-    // fetch('https://pastor-absolute-cataract.ngrok-free.dev/foodlist')
       .then((res) => res.json())
       .then((data) => setFood(data))
   }, [])
@@ -159,15 +158,15 @@ function Home({lang,setLang}) {
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-header">
-              <h1 className="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+              <h1 className="modal-title fs-5" id="exampleModalLabel">{lang == 'RU'?'Заказ':'Buyurtma'}</h1>
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="modal-body">
               <Order />
             </div>
             <div className="modal-footer">
-              <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" className="btn btn-primary">Save changes</button>
+              <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">{lang == 'RU'?'Закрит':'Yopish'}</button>
+              <button type="button" className="btn btn-primary">{lang == 'RU'?'Сохранит':'Saqlash'}</button>
             </div>
           </div>
         </div>
